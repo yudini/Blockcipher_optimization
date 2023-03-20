@@ -1,0 +1,4766 @@
+
+CHAM_optimization.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000060  00800100  0000137e  00001412  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .RKSection    00000001  00800400  00800400  00001472  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  2 .text         0000137e  00000000  00000000  00000094  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .comment      00000030  00000000  00000000  00001473  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 0000003c  00000000  00000000  000014a4  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000140  00000000  00000000  000014e0  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000016fb  00000000  00000000  00001620  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 00000a21  00000000  00000000  00002d1b  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   000024e7  00000000  00000000  0000373c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  00000330  00000000  00000000  00005c24  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    0000053f  00000000  00000000  00005f54  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000ba9  00000000  00000000  00006493  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000060  00000000  00000000  0000703c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+       0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+       2:	00 00       	nop
+       4:	5a c0       	rjmp	.+180    	; 0xba <__bad_interrupt>
+       6:	00 00       	nop
+       8:	58 c0       	rjmp	.+176    	; 0xba <__bad_interrupt>
+       a:	00 00       	nop
+       c:	56 c0       	rjmp	.+172    	; 0xba <__bad_interrupt>
+       e:	00 00       	nop
+      10:	54 c0       	rjmp	.+168    	; 0xba <__bad_interrupt>
+      12:	00 00       	nop
+      14:	52 c0       	rjmp	.+164    	; 0xba <__bad_interrupt>
+      16:	00 00       	nop
+      18:	50 c0       	rjmp	.+160    	; 0xba <__bad_interrupt>
+      1a:	00 00       	nop
+      1c:	4e c0       	rjmp	.+156    	; 0xba <__bad_interrupt>
+      1e:	00 00       	nop
+      20:	4c c0       	rjmp	.+152    	; 0xba <__bad_interrupt>
+      22:	00 00       	nop
+      24:	4a c0       	rjmp	.+148    	; 0xba <__bad_interrupt>
+      26:	00 00       	nop
+      28:	48 c0       	rjmp	.+144    	; 0xba <__bad_interrupt>
+      2a:	00 00       	nop
+      2c:	46 c0       	rjmp	.+140    	; 0xba <__bad_interrupt>
+      2e:	00 00       	nop
+      30:	44 c0       	rjmp	.+136    	; 0xba <__bad_interrupt>
+      32:	00 00       	nop
+      34:	42 c0       	rjmp	.+132    	; 0xba <__bad_interrupt>
+      36:	00 00       	nop
+      38:	40 c0       	rjmp	.+128    	; 0xba <__bad_interrupt>
+      3a:	00 00       	nop
+      3c:	3e c0       	rjmp	.+124    	; 0xba <__bad_interrupt>
+      3e:	00 00       	nop
+      40:	3c c0       	rjmp	.+120    	; 0xba <__bad_interrupt>
+      42:	00 00       	nop
+      44:	3a c0       	rjmp	.+116    	; 0xba <__bad_interrupt>
+      46:	00 00       	nop
+      48:	38 c0       	rjmp	.+112    	; 0xba <__bad_interrupt>
+      4a:	00 00       	nop
+      4c:	36 c0       	rjmp	.+108    	; 0xba <__bad_interrupt>
+      4e:	00 00       	nop
+      50:	34 c0       	rjmp	.+104    	; 0xba <__bad_interrupt>
+      52:	00 00       	nop
+      54:	32 c0       	rjmp	.+100    	; 0xba <__bad_interrupt>
+      56:	00 00       	nop
+      58:	30 c0       	rjmp	.+96     	; 0xba <__bad_interrupt>
+      5a:	00 00       	nop
+      5c:	2e c0       	rjmp	.+92     	; 0xba <__bad_interrupt>
+      5e:	00 00       	nop
+      60:	2c c0       	rjmp	.+88     	; 0xba <__bad_interrupt>
+      62:	00 00       	nop
+      64:	2a c0       	rjmp	.+84     	; 0xba <__bad_interrupt>
+      66:	00 00       	nop
+      68:	28 c0       	rjmp	.+80     	; 0xba <__bad_interrupt>
+      6a:	00 00       	nop
+      6c:	26 c0       	rjmp	.+76     	; 0xba <__bad_interrupt>
+      6e:	00 00       	nop
+      70:	24 c0       	rjmp	.+72     	; 0xba <__bad_interrupt>
+      72:	00 00       	nop
+      74:	22 c0       	rjmp	.+68     	; 0xba <__bad_interrupt>
+      76:	00 00       	nop
+      78:	20 c0       	rjmp	.+64     	; 0xba <__bad_interrupt>
+      7a:	00 00       	nop
+      7c:	1e c0       	rjmp	.+60     	; 0xba <__bad_interrupt>
+      7e:	00 00       	nop
+      80:	1c c0       	rjmp	.+56     	; 0xba <__bad_interrupt>
+      82:	00 00       	nop
+      84:	1a c0       	rjmp	.+52     	; 0xba <__bad_interrupt>
+      86:	00 00       	nop
+      88:	18 c0       	rjmp	.+48     	; 0xba <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+      8c:	11 24       	eor	r1, r1
+      8e:	1f be       	out	0x3f, r1	; 63
+      90:	cf ef       	ldi	r28, 0xFF	; 255
+      92:	d0 e1       	ldi	r29, 0x10	; 16
+      94:	de bf       	out	0x3e, r29	; 62
+      96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+      98:	11 e0       	ldi	r17, 0x01	; 1
+      9a:	a0 e0       	ldi	r26, 0x00	; 0
+      9c:	b1 e0       	ldi	r27, 0x01	; 1
+      9e:	ee e7       	ldi	r30, 0x7E	; 126
+      a0:	f3 e1       	ldi	r31, 0x13	; 19
+      a2:	00 e0       	ldi	r16, 0x00	; 0
+      a4:	0b bf       	out	0x3b, r16	; 59
+      a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+      a8:	07 90       	elpm	r0, Z+
+      aa:	0d 92       	st	X+, r0
+      ac:	a0 36       	cpi	r26, 0x60	; 96
+      ae:	b1 07       	cpc	r27, r17
+      b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+      b2:	0e 94 b7 09 	call	0x136e	; 0x136e <main>
+      b6:	0c 94 bd 09 	jmp	0x137a	; 0x137a <_exit>
+
+000000ba <__bad_interrupt>:
+      ba:	a2 cf       	rjmp	.-188    	; 0x0 <__vectors>
+
+000000bc <cham128_decrypt>:
+
+	#define CNT R16
+
+	cham128_decrypt:
+	
+	PUSH R2
+      bc:	2f 92       	push	r2
+	PUSH R3
+      be:	3f 92       	push	r3
+	PUSH R8
+      c0:	8f 92       	push	r8
+	PUSH R9
+      c2:	9f 92       	push	r9
+	PUSH R10
+      c4:	af 92       	push	r10
+	PUSH R11
+      c6:	bf 92       	push	r11
+	PUSH R12
+      c8:	cf 92       	push	r12
+	PUSH R13
+      ca:	df 92       	push	r13
+	PUSH R14
+      cc:	ef 92       	push	r14
+	PUSH R15
+      ce:	ff 92       	push	r15
+	PUSH R16
+      d0:	0f 93       	push	r16
+	PUSH R17
+      d2:	1f 93       	push	r17
+	PUSH R28
+      d4:	cf 93       	push	r28
+	PUSH R29
+      d6:	df 93       	push	r29
+
+	MOVW R28, R24   // derypted ypointer
+      d8:	ec 01       	movw	r28, r24
+	MOVW R26, R22   // ct xpointer
+      da:	db 01       	movw	r26, r22
+	MOVW R30, R20   // rks zpointer
+      dc:	fa 01       	movw	r30, r20
+
+	LD Y00, X+
+      de:	2d 91       	ld	r18, X+
+	LD Y01, X+
+      e0:	3d 91       	ld	r19, X+
+	LD Y02, X+
+      e2:	4d 91       	ld	r20, X+
+	LD Y03, X+
+      e4:	5d 91       	ld	r21, X+
+	LD Y10, X+
+      e6:	6d 91       	ld	r22, X+
+	LD Y11, X+
+      e8:	7d 91       	ld	r23, X+
+	LD Y12, X+
+      ea:	8d 91       	ld	r24, X+
+	LD Y13, X+
+      ec:	9d 91       	ld	r25, X+
+	LD Y20, X+
+      ee:	8d 90       	ld	r8, X+
+	LD Y21, X+
+      f0:	9d 90       	ld	r9, X+
+	LD Y22, X+
+      f2:	ad 90       	ld	r10, X+
+	LD Y23, X+
+      f4:	bd 90       	ld	r11, X+
+	LD Y30, X+
+      f6:	cd 90       	ld	r12, X+
+	LD Y31, X+
+      f8:	dd 90       	ld	r13, X+
+	LD Y32, X+
+      fa:	ed 90       	ld	r14, X+
+	LD Y33, X+
+      fc:	fd 90       	ld	r15, X+
+
+	PUSH R26
+      fe:	af 93       	push	r26
+	PUSH R27
+     100:	bf 93       	push	r27
+
+	LDI RC, 112
+     102:	10 e7       	ldi	r17, 0x70	; 112
+	CLR CNT
+     104:	00 27       	eor	r16, r16
+
+00000106 <LOOP>:
+	LOOP:
+	SUBI R30, -32
+     106:	e0 5e       	subi	r30, 0xE0	; 224
+	//ROUND 1
+	MOVW TM0, Y00
+     108:	19 01       	movw	r2, r18
+	MOVW TM2, Y02
+     10a:	da 01       	movw	r26, r20
+	
+	LD RK, -Z      //ROl 8 생략한 대신 위치에 맞춰 키 연산
+     10c:	02 90       	ld	r0, -Z
+	EOR TM2, RK
+     10e:	a0 25       	eor	r26, r0
+	LD RK, -Z
+     110:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     112:	30 24       	eor	r3, r0
+	LD RK, -Z 
+     114:	02 90       	ld	r0, -Z
+	EOR TM0, RK
+     116:	20 24       	eor	r2, r0
+	LD RK, -Z
+     118:	02 90       	ld	r0, -Z
+	EOR TM3, RK
+     11a:	b0 25       	eor	r27, r0
+
+	//ROR1
+	BST Y30, 0
+     11c:	c0 fa       	bst	r12, 0
+	LSR Y33
+     11e:	f6 94       	lsr	r15
+	ROR Y32
+     120:	e7 94       	ror	r14
+	ROR Y31 
+     122:	d7 94       	ror	r13
+	ROR Y30
+     124:	c7 94       	ror	r12
+	BLD Y33, 7
+     126:	f7 f8       	bld	r15, 7
+
+	//SUB, 위에서 ROl 8 생략한 대신 위치에 맞춰 연산
+	SUB Y30, TM3
+     128:	cb 1a       	sub	r12, r27
+	SBC Y31, TM0  
+     12a:	d2 08       	sbc	r13, r2
+	SBC Y32, TM1
+     12c:	e3 08       	sbc	r14, r3
+	SBC Y33, TM2
+     12e:	fa 0a       	sbc	r15, r26
+
+	DEC RC
+     130:	1a 95       	dec	r17
+	EOR Y30, RC 
+     132:	c1 26       	eor	r12, r17
+
+	//ROUND 2
+	MOVW TM0, Y30
+     134:	16 01       	movw	r2, r12
+	MOVW TM2, Y32
+     136:	d7 01       	movw	r26, r14
+
+	//ROL1
+	LSL TM0
+     138:	22 0c       	add	r2, r2
+	ROL TM1
+     13a:	33 1c       	adc	r3, r3
+	ROL TM2
+     13c:	aa 1f       	adc	r26, r26
+	ROL TM3
+     13e:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     140:	21 1c       	adc	r2, r1
+
+	//RK XOR 
+	LD RK, -Z
+     142:	02 90       	ld	r0, -Z
+	EOR TM3, RK
+     144:	b0 25       	eor	r27, r0
+	LD RK, -Z
+     146:	02 90       	ld	r0, -Z
+	EOR TM2, RK
+     148:	a0 25       	eor	r26, r0
+	LD RK, -Z 
+     14a:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     14c:	30 24       	eor	r3, r0
+	LD RK, -Z
+     14e:	02 90       	ld	r0, -Z
+	EOR TM0, RK
+     150:	20 24       	eor	r2, r0
+
+    //SUB, ROR 8을 생략하였으므로 위치 고려하여 연산
+	SUB Y21, TM0
+     152:	92 18       	sub	r9, r2
+	SBC Y22, TM1  
+     154:	a3 08       	sbc	r10, r3
+	SBC Y23, TM2
+     156:	ba 0a       	sbc	r11, r26
+	SBC Y20, TM3
+     158:	8b 0a       	sbc	r8, r27
+
+	//RC XOR 
+	DEC RC
+     15a:	1a 95       	dec	r17
+	EOR Y21, RC 
+     15c:	91 26       	eor	r9, r17
+
+	//ROUND 3
+	//전 라운드에서 ROR8 생략했으므로 ROL8도 생략가능
+	MOVW TM0, Y20
+     15e:	14 01       	movw	r2, r8
+	MOVW TM2, Y22
+     160:	d5 01       	movw	r26, r10
+
+	//RK XOR
+	LD RK, -Z 
+     162:	02 90       	ld	r0, -Z
+	EOR TM3, RK
+     164:	b0 25       	eor	r27, r0
+	LD RK, -Z
+     166:	02 90       	ld	r0, -Z
+	EOR TM2, RK
+     168:	a0 25       	eor	r26, r0
+	LD RK, -Z 
+     16a:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     16c:	30 24       	eor	r3, r0
+	LD RK, -Z
+     16e:	02 90       	ld	r0, -Z
+	EOR TM0, RK
+     170:	20 24       	eor	r2, r0
+	
+	//ROR1
+	BST Y10, 0
+     172:	60 fb       	bst	r22, 0
+	LSR Y13
+     174:	96 95       	lsr	r25
+	ROR Y12
+     176:	87 95       	ror	r24
+	ROR Y11 
+     178:	77 95       	ror	r23
+	ROR Y10
+     17a:	67 95       	ror	r22
+	BLD Y13, 7
+     17c:	97 f9       	bld	r25, 7
+
+	//SUB
+	SUB Y10, TM0 
+     17e:	62 19       	sub	r22, r2
+	SBC Y11, TM1  
+     180:	73 09       	sbc	r23, r3
+	SBC Y12, TM2
+     182:	8a 0b       	sbc	r24, r26
+	SBC Y13, TM3
+     184:	9b 0b       	sbc	r25, r27
+
+	DEC RC
+     186:	1a 95       	dec	r17
+	EOR Y10, RC
+     188:	61 27       	eor	r22, r17
+
+	//ROUND 4
+	MOVW TM0, Y10
+     18a:	1b 01       	movw	r2, r22
+	MOVW TM2, Y12
+     18c:	dc 01       	movw	r26, r24
+
+	//ROL1
+	LSL TM0
+     18e:	22 0c       	add	r2, r2
+	ROL TM1
+     190:	33 1c       	adc	r3, r3
+	ROL TM2
+     192:	aa 1f       	adc	r26, r26
+	ROL TM3
+     194:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     196:	21 1c       	adc	r2, r1
+
+	//RK XOR 
+	LD RK, -Z
+     198:	02 90       	ld	r0, -Z
+	EOR TM3, RK
+     19a:	b0 25       	eor	r27, r0
+	LD RK, -Z
+     19c:	02 90       	ld	r0, -Z
+	EOR TM2, RK
+     19e:	a0 25       	eor	r26, r0
+	LD RK, -Z 
+     1a0:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     1a2:	30 24       	eor	r3, r0
+	LD RK, -Z
+     1a4:	02 90       	ld	r0, -Z
+	EOR TM0, RK
+     1a6:	20 24       	eor	r2, r0
+
+	//SUB, ROR 8을 생략하였으므로 위치 고려하여 연산
+	SUB Y01, TM0
+     1a8:	32 19       	sub	r19, r2
+	SBC Y02, TM1
+     1aa:	43 09       	sbc	r20, r3
+	SBC Y03, TM2
+     1ac:	5a 0b       	sbc	r21, r26
+	SBC Y00, TM3
+     1ae:	2b 0b       	sbc	r18, r27
+
+	DEC RC
+     1b0:	1a 95       	dec	r17
+	EOR Y01, RC
+     1b2:	31 27       	eor	r19, r17
+
+	//ROUND 5 
+	//전 라운드에서 ROR8 생략했으므로 ROL8도 생략가능
+	MOVW TM0, Y00
+     1b4:	19 01       	movw	r2, r18
+	MOVW TM2, Y02
+     1b6:	da 01       	movw	r26, r20
+
+	//RK XOR
+	LD RK, -Z 
+     1b8:	02 90       	ld	r0, -Z
+	EOR TM3, RK
+     1ba:	b0 25       	eor	r27, r0
+	LD RK, -Z
+     1bc:	02 90       	ld	r0, -Z
+	EOR TM2, RK
+     1be:	a0 25       	eor	r26, r0
+	LD RK, -Z 
+     1c0:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     1c2:	30 24       	eor	r3, r0
+	LD RK, -Z
+     1c4:	02 90       	ld	r0, -Z
+	EOR TM0, RK
+     1c6:	20 24       	eor	r2, r0
+
+	//ROR1
+	BST Y30, 0
+     1c8:	c0 fa       	bst	r12, 0
+	LSR Y33
+     1ca:	f6 94       	lsr	r15
+	ROR Y32
+     1cc:	e7 94       	ror	r14
+	ROR Y31 
+     1ce:	d7 94       	ror	r13
+	ROR Y30
+     1d0:	c7 94       	ror	r12
+	BLD Y33, 7
+     1d2:	f7 f8       	bld	r15, 7
+
+	//SUB 연산
+	SUB Y30, TM0
+     1d4:	c2 18       	sub	r12, r2
+	SBC Y31, TM1
+     1d6:	d3 08       	sbc	r13, r3
+	SBC Y32, TM2
+     1d8:	ea 0a       	sbc	r14, r26
+	SBC Y33, TM3
+     1da:	fb 0a       	sbc	r15, r27
+
+	DEC RC
+     1dc:	1a 95       	dec	r17
+	EOR Y30, RC
+     1de:	c1 26       	eor	r12, r17
+
+	//ROUND 6
+	MOVW TM0, Y30
+     1e0:	16 01       	movw	r2, r12
+	MOVW TM2, Y32
+     1e2:	d7 01       	movw	r26, r14
+
+	//ROL1
+	LSL TM0
+     1e4:	22 0c       	add	r2, r2
+	ROL TM1
+     1e6:	33 1c       	adc	r3, r3
+	ROL TM2
+     1e8:	aa 1f       	adc	r26, r26
+	ROL TM3
+     1ea:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     1ec:	21 1c       	adc	r2, r1
+
+	//RK XOR 
+	LD RK, -Z
+     1ee:	02 90       	ld	r0, -Z
+	EOR TM3, RK
+     1f0:	b0 25       	eor	r27, r0
+	LD RK, -Z
+     1f2:	02 90       	ld	r0, -Z
+	EOR TM2, RK
+     1f4:	a0 25       	eor	r26, r0
+	LD RK, -Z 
+     1f6:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     1f8:	30 24       	eor	r3, r0
+	LD RK, -Z
+     1fa:	02 90       	ld	r0, -Z
+	EOR TM0, RK
+     1fc:	20 24       	eor	r2, r0
+
+	//ROR8 대신 위치 맞춰 연산
+	SUB Y22, TM0
+     1fe:	a2 18       	sub	r10, r2
+	SBC Y23, TM1
+     200:	b3 08       	sbc	r11, r3
+	SBC Y20, TM2
+     202:	8a 0a       	sbc	r8, r26
+	SBC Y21, TM3
+     204:	9b 0a       	sbc	r9, r27
+
+	//전 라운드에서 안해준 ROR8과 이번 라운드 ROR8을 합춰 워드단위로 ROR8 수행
+	MOVW TM0, Y22
+     206:	15 01       	movw	r2, r10
+	MOVW Y22, Y20
+     208:	54 01       	movw	r10, r8
+	MOVW Y20, TM0
+     20a:	41 01       	movw	r8, r2
+
+	DEC RC
+     20c:	1a 95       	dec	r17
+	EOR Y20, RC
+     20e:	81 26       	eor	r8, r17
+
+	//ROUND 7
+	//ROL 8
+	MOV TM0, Y23
+     210:	2b 2c       	mov	r2, r11
+	MOV TM1, Y20
+     212:	38 2c       	mov	r3, r8
+	MOV TM2, Y21
+     214:	a9 2d       	mov	r26, r9
+	MOV TM3, Y22
+     216:	ba 2d       	mov	r27, r10
+
+	//RK XOR 
+	LD RK, -Z
+     218:	02 90       	ld	r0, -Z
+	EOR TM3, RK
+     21a:	b0 25       	eor	r27, r0
+	LD RK, -Z
+     21c:	02 90       	ld	r0, -Z
+	EOR TM2, RK
+     21e:	a0 25       	eor	r26, r0
+	LD RK, -Z 
+     220:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     222:	30 24       	eor	r3, r0
+	LD RK, -Z
+     224:	02 90       	ld	r0, -Z
+	EOR TM0, RK
+     226:	20 24       	eor	r2, r0
+
+	//ROR1
+	BST Y10, 0
+     228:	60 fb       	bst	r22, 0
+	LSR Y13
+     22a:	96 95       	lsr	r25
+	ROR Y12
+     22c:	87 95       	ror	r24
+	ROR Y11 
+     22e:	77 95       	ror	r23
+	ROR Y10
+     230:	67 95       	ror	r22
+	BLD Y13, 7
+     232:	97 f9       	bld	r25, 7
+
+	//SUB 연산
+	SUB Y10, TM0
+     234:	62 19       	sub	r22, r2
+	SBC Y11, TM1
+     236:	73 09       	sbc	r23, r3
+	SBC Y12, TM2
+     238:	8a 0b       	sbc	r24, r26
+	SBC Y13, TM3
+     23a:	9b 0b       	sbc	r25, r27
+
+	//RC XOR
+	DEC RC
+     23c:	1a 95       	dec	r17
+	EOR Y10, RC
+     23e:	61 27       	eor	r22, r17
+
+	//ROUND 8
+	MOVW TM0, Y10
+     240:	1b 01       	movw	r2, r22
+	MOVW TM2, Y12
+     242:	dc 01       	movw	r26, r24
+
+	//ROL1
+	LSL TM0
+     244:	22 0c       	add	r2, r2
+	ROL TM1
+     246:	33 1c       	adc	r3, r3
+	ROL TM2
+     248:	aa 1f       	adc	r26, r26
+	ROL TM3
+     24a:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     24c:	21 1c       	adc	r2, r1
+
+	//RK XOR 
+	LD RK, -Z
+     24e:	02 90       	ld	r0, -Z
+	EOR TM3, RK
+     250:	b0 25       	eor	r27, r0
+	LD RK, -Z
+     252:	02 90       	ld	r0, -Z
+	EOR TM2, RK
+     254:	a0 25       	eor	r26, r0
+	LD RK, -Z 
+     256:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     258:	30 24       	eor	r3, r0
+	LD RK, -Z
+     25a:	02 90       	ld	r0, -Z
+	EOR TM0, RK
+     25c:	20 24       	eor	r2, r0
+
+	//ROR8 대신 위치 맞춰 연산
+	SUB Y02, TM0
+     25e:	42 19       	sub	r20, r2
+	SBC Y03, TM1
+     260:	53 09       	sbc	r21, r3
+	SBC Y00, TM2
+     262:	2a 0b       	sbc	r18, r26
+	SBC Y01, TM3
+     264:	3b 0b       	sbc	r19, r27
+
+	//전 라운드에서 안해준 ROR8과 이번 라운드 ROR8을 합춰 워드단위로 ROR8 수행
+	MOVW TM0, Y02
+     266:	1a 01       	movw	r2, r20
+	MOVW Y02, Y00
+     268:	a9 01       	movw	r20, r18
+	MOVW Y00, TM0
+     26a:	91 01       	movw	r18, r2
+
+	DEC RC
+     26c:	1a 95       	dec	r17
+	EOR Y00, RC  
+     26e:	21 27       	eor	r18, r17
+
+	CPSE RC,CNT
+     270:	10 13       	cpse	r17, r16
+	RJMP LOOP
+     272:	49 cf       	rjmp	.-366    	; 0x106 <LOOP>
+
+	POP R27
+     274:	bf 91       	pop	r27
+	POP R26
+     276:	af 91       	pop	r26
+
+	ST Y+, Y00
+     278:	29 93       	st	Y+, r18
+	ST Y+, Y01
+     27a:	39 93       	st	Y+, r19
+	ST Y+, Y02
+     27c:	49 93       	st	Y+, r20
+	ST Y+, Y03
+     27e:	59 93       	st	Y+, r21
+	ST Y+, Y10
+     280:	69 93       	st	Y+, r22
+	ST Y+, Y11
+     282:	79 93       	st	Y+, r23
+	ST Y+, Y12
+     284:	89 93       	st	Y+, r24
+	ST Y+, Y13
+     286:	99 93       	st	Y+, r25
+	ST Y+, Y20
+     288:	89 92       	st	Y+, r8
+	ST Y+, Y21
+     28a:	99 92       	st	Y+, r9
+	ST Y+, Y22
+     28c:	a9 92       	st	Y+, r10
+	ST Y+, Y23
+     28e:	b9 92       	st	Y+, r11
+	ST Y+, Y30
+     290:	c9 92       	st	Y+, r12
+	ST Y+, Y31
+     292:	d9 92       	st	Y+, r13
+	ST Y+, Y32
+     294:	e9 92       	st	Y+, r14
+	ST Y+, Y33
+     296:	f9 92       	st	Y+, r15
+
+	POP R29
+     298:	df 91       	pop	r29
+	POP R28
+     29a:	cf 91       	pop	r28
+	POP R17
+     29c:	1f 91       	pop	r17
+	POP R16
+     29e:	0f 91       	pop	r16
+	POP R15
+     2a0:	ff 90       	pop	r15
+	POP R14
+     2a2:	ef 90       	pop	r14
+	POP R13
+     2a4:	df 90       	pop	r13
+	POP R12
+     2a6:	cf 90       	pop	r12
+	POP R11
+     2a8:	bf 90       	pop	r11
+	POP R10
+     2aa:	af 90       	pop	r10
+	POP R9
+     2ac:	9f 90       	pop	r9
+	POP R8
+     2ae:	8f 90       	pop	r8
+	POP R3
+     2b0:	3f 90       	pop	r3
+	POP R2
+     2b2:	2f 90       	pop	r2
+
+     2b4:	08 95       	ret
+
+000002b6 <cham128_encrypt>:
+
+	.endm
+
+	cham128_encrypt:
+
+	PUSH R2
+     2b6:	2f 92       	push	r2
+	PUSH R3
+     2b8:	3f 92       	push	r3
+	PUSH R8
+     2ba:	8f 92       	push	r8
+	PUSH R9
+     2bc:	9f 92       	push	r9
+	PUSH R10
+     2be:	af 92       	push	r10
+	PUSH R11
+     2c0:	bf 92       	push	r11
+	PUSH R12
+     2c2:	cf 92       	push	r12
+	PUSH R13
+     2c4:	df 92       	push	r13
+	PUSH R14
+     2c6:	ef 92       	push	r14
+	PUSH R15
+     2c8:	ff 92       	push	r15
+	PUSH R16
+     2ca:	0f 93       	push	r16
+	PUSH R17
+     2cc:	1f 93       	push	r17
+	PUSH R28
+     2ce:	cf 93       	push	r28
+	PUSH R29
+     2d0:	df 93       	push	r29
+
+	MOVW R28, R24   // encrypted ypointer
+     2d2:	ec 01       	movw	r28, r24
+	MOVW R26, R22   // pt xpointer
+     2d4:	db 01       	movw	r26, r22
+	MOVW R30, R20   // rks zpointer
+     2d6:	fa 01       	movw	r30, r20
+
+	LD X00, X+
+     2d8:	2d 91       	ld	r18, X+
+	LD X01, X+
+     2da:	3d 91       	ld	r19, X+
+	LD X02, X+
+     2dc:	4d 91       	ld	r20, X+
+	LD X03, X+
+     2de:	5d 91       	ld	r21, X+
+	LD X10, X+
+     2e0:	6d 91       	ld	r22, X+
+	LD X11, X+
+     2e2:	7d 91       	ld	r23, X+
+	LD X12, X+
+     2e4:	8d 91       	ld	r24, X+
+	LD X13, X+	
+     2e6:	9d 91       	ld	r25, X+
+	LD X20, X+
+     2e8:	8d 90       	ld	r8, X+
+	LD X21, X+
+     2ea:	9d 90       	ld	r9, X+
+	LD X22, X+
+     2ec:	ad 90       	ld	r10, X+
+	LD X23, X+
+     2ee:	bd 90       	ld	r11, X+
+	LD X30, X+
+     2f0:	cd 90       	ld	r12, X+
+	LD X31, X+
+     2f2:	dd 90       	ld	r13, X+
+	LD X32, X+
+     2f4:	ed 90       	ld	r14, X+
+	LD X33, X+
+     2f6:	fd 90       	ld	r15, X+
+
+	PUSH R26
+     2f8:	af 93       	push	r26
+	PUSH R27
+     2fa:	bf 93       	push	r27
+
+	CLR RC 
+     2fc:	11 27       	eor	r17, r17
+	LDI CNT, 112
+     2fe:	00 e7       	ldi	r16, 0x70	; 112
+
+00000300 <LOOP>:
+
+	LOOP:
+	ANDI R30, 31
+     300:	ef 71       	andi	r30, 0x1F	; 31
+	//ROUND1	
+	MOVW TM0, X10 
+     302:	1b 01       	movw	r2, r22
+	MOVW TM2, X12
+     304:	dc 01       	movw	r26, r24
+
+	//ROL 1
+	LSL TM0
+     306:	22 0c       	add	r2, r2
+	ROL TM1
+     308:	33 1c       	adc	r3, r3
+	ROL TM2
+     30a:	aa 1f       	adc	r26, r26
+	ROL TM3
+     30c:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     30e:	21 1c       	adc	r2, r1
+
+	//RK XOR
+	LD RK, Z+ 
+     310:	01 90       	ld	r0, Z+
+	EOR TM0, RK
+     312:	20 24       	eor	r2, r0
+	LD RK, Z+
+     314:	01 90       	ld	r0, Z+
+	EOR TM1, RK
+     316:	30 24       	eor	r3, r0
+	LD RK, Z+ 
+     318:	01 90       	ld	r0, Z+
+	EOR TM2, RK
+     31a:	a0 25       	eor	r26, r0
+	LD RK, Z+
+     31c:	01 90       	ld	r0, Z+
+	EOR TM3, RK
+     31e:	b0 25       	eor	r27, r0
+		
+	//RC xor
+	EOR X00, RC
+     320:	21 27       	eor	r18, r17
+
+	//ADD
+	ADD X00, TM0
+     322:	22 0d       	add	r18, r2
+	ADC X01, TM1
+     324:	33 1d       	adc	r19, r3
+	ADC X02, TM2
+     326:	4a 1f       	adc	r20, r26
+	ADC X03, TM3
+     328:	5b 1f       	adc	r21, r27
+
+    INC RC
+     32a:	13 95       	inc	r17
+
+	//ROUND2
+	MOVW TM0, X20 
+     32c:	14 01       	movw	r2, r8
+	MOVW TM2, X22 
+     32e:	d5 01       	movw	r26, r10
+
+	//RK xor  
+	LD RK, Z+  
+     330:	01 90       	ld	r0, Z+
+	EOR TM3, RK  //ROL8 안했으므로 위치 고려하여 연산
+     332:	b0 25       	eor	r27, r0
+	LD RK, Z+   
+     334:	01 90       	ld	r0, Z+
+	EOR TM0, RK
+     336:	20 24       	eor	r2, r0
+	LD RK, Z+   
+     338:	01 90       	ld	r0, Z+
+	EOR TM1, RK
+     33a:	30 24       	eor	r3, r0
+	LD RK, Z+   
+     33c:	01 90       	ld	r0, Z+
+	EOR TM2, RK
+     33e:	a0 25       	eor	r26, r0
+
+	//RC xor
+	EOR X10, RC  
+     340:	61 27       	eor	r22, r17
+		 
+	//ADD 연산
+	ADD X10, TM3   //ROL8 안했으므로 위치 고려하여 연산 
+     342:	6b 0f       	add	r22, r27
+	ADC X11, TM0
+     344:	72 1d       	adc	r23, r2
+	ADC X12, TM1
+     346:	83 1d       	adc	r24, r3
+	ADC X13, TM2
+     348:	9a 1f       	adc	r25, r26
+
+	//ROL1
+	LSL X10
+     34a:	66 0f       	add	r22, r22
+	ROL X11
+     34c:	77 1f       	adc	r23, r23
+	ROL X12
+     34e:	88 1f       	adc	r24, r24
+	ROL X13
+     350:	99 1f       	adc	r25, r25
+	ADC X10, R1
+     352:	61 1d       	adc	r22, r1
+
+	INC RC
+     354:	13 95       	inc	r17
+
+	//ROUND3	
+	MOVW TM0, X30
+     356:	16 01       	movw	r2, r12
+	MOVW TM2, X32 
+     358:	d7 01       	movw	r26, r14
+
+	//ROL 1
+	LSL TM0
+     35a:	22 0c       	add	r2, r2
+	ROL TM1
+     35c:	33 1c       	adc	r3, r3
+	ROL TM2
+     35e:	aa 1f       	adc	r26, r26
+	ROL TM3
+     360:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     362:	21 1c       	adc	r2, r1
+
+	//RK XOR
+	LD RK, Z+ 
+     364:	01 90       	ld	r0, Z+
+	EOR TM0, RK
+     366:	20 24       	eor	r2, r0
+	LD RK, Z+
+     368:	01 90       	ld	r0, Z+
+	EOR TM1, RK
+     36a:	30 24       	eor	r3, r0
+	LD RK, Z+ 
+     36c:	01 90       	ld	r0, Z+
+	EOR TM2, RK
+     36e:	a0 25       	eor	r26, r0
+	LD RK, Z+
+     370:	01 90       	ld	r0, Z+
+	EOR TM3, RK
+     372:	b0 25       	eor	r27, r0
+		
+	//RC xor
+	EOR X20, RC
+     374:	81 26       	eor	r8, r17
+
+	//ADD
+	ADD X20, TM0
+     376:	82 0c       	add	r8, r2
+	ADC X21, TM1
+     378:	93 1c       	adc	r9, r3
+	ADC X22, TM2
+     37a:	aa 1e       	adc	r10, r26
+	ADC X23, TM3
+     37c:	bb 1e       	adc	r11, r27
+
+    INC RC
+     37e:	13 95       	inc	r17
+
+	//ROUND4
+	MOVW TM0, X00  
+     380:	19 01       	movw	r2, r18
+	MOVW TM2, X02
+     382:	da 01       	movw	r26, r20
+
+	//RK xor  
+	LD RK, Z+   //전 라운드에서 ROL8안했으므로 ROL8생략하고 16비트 상하위 반전 
+     384:	01 90       	ld	r0, Z+
+	EOR TM2, RK 
+     386:	a0 25       	eor	r26, r0
+	LD RK, Z+   
+     388:	01 90       	ld	r0, Z+
+	EOR TM3, RK
+     38a:	b0 25       	eor	r27, r0
+	LD RK, Z+  
+     38c:	01 90       	ld	r0, Z+
+	EOR TM0, RK 
+     38e:	20 24       	eor	r2, r0
+	LD RK, Z+   
+     390:	01 90       	ld	r0, Z+
+	EOR TM1, RK
+     392:	30 24       	eor	r3, r0
+		
+	//RC xor
+	EOR X30, RC  
+     394:	c1 26       	eor	r12, r17
+		 
+	//ADD 연산,전 라운드에서 ROL8안했으므로 ROL8생략하고 16비트 상하위 반전 
+	ADD X30, TM2   
+     396:	ca 0e       	add	r12, r26
+	ADC X31, TM3
+     398:	db 1e       	adc	r13, r27
+	ADC X32, TM0
+     39a:	e2 1c       	adc	r14, r2
+	ADC X33, TM1
+     39c:	f3 1c       	adc	r15, r3
+
+	//ROL1
+	LSL X30
+     39e:	cc 0c       	add	r12, r12
+	ROL X31
+     3a0:	dd 1c       	adc	r13, r13
+	ROL X32
+     3a2:	ee 1c       	adc	r14, r14
+	ROL X33
+     3a4:	ff 1c       	adc	r15, r15
+	ADC X30, R1
+     3a6:	c1 1c       	adc	r12, r1
+
+	INC RC
+     3a8:	13 95       	inc	r17
+
+	//ROUND5
+	MOVW TM0, X10 
+     3aa:	1b 01       	movw	r2, r22
+	MOVW TM2, X12
+     3ac:	dc 01       	movw	r26, r24
+
+	//ROL 1
+	LSL TM0
+     3ae:	22 0c       	add	r2, r2
+	ROL TM1
+     3b0:	33 1c       	adc	r3, r3
+	ROL TM2
+     3b2:	aa 1f       	adc	r26, r26
+	ROL TM3
+     3b4:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     3b6:	21 1c       	adc	r2, r1
+
+	//RK XOR
+	LD RK, Z+ 
+     3b8:	01 90       	ld	r0, Z+
+	EOR TM0, RK
+     3ba:	20 24       	eor	r2, r0
+	LD RK, Z+
+     3bc:	01 90       	ld	r0, Z+
+	EOR TM1, RK
+     3be:	30 24       	eor	r3, r0
+	LD RK, Z+ 
+     3c0:	01 90       	ld	r0, Z+
+	EOR TM2, RK
+     3c2:	a0 25       	eor	r26, r0
+	LD RK, Z+
+     3c4:	01 90       	ld	r0, Z+
+	EOR TM3, RK
+     3c6:	b0 25       	eor	r27, r0
+		
+	//RC xor
+	EOR X03, RC  //ROL8 생략되어있는 상태
+     3c8:	51 27       	eor	r21, r17
+
+	//ADD
+	ADD X03, TM0//ROL8 생략되어있는 상태,위치 고려하여 연산 
+     3ca:	52 0d       	add	r21, r2
+	ADC X00, TM1
+     3cc:	23 1d       	adc	r18, r3
+	ADC X01, TM2
+     3ce:	3a 1f       	adc	r19, r26
+	ADC X02, TM3
+     3d0:	4b 1f       	adc	r20, r27
+
+	MOVW TM0, X00  //전 라운드 ROL8과 합쳐 16비트 상하위 이동 
+     3d2:	19 01       	movw	r2, r18
+	MOVW X00, X02
+     3d4:	9a 01       	movw	r18, r20
+	MOVW X02, TM0
+     3d6:	a1 01       	movw	r20, r2
+
+    INC RC
+     3d8:	13 95       	inc	r17
+
+	//ROUND6
+	MOVW TM0, X20
+     3da:	14 01       	movw	r2, r8
+	MOVW TM2, X22 
+     3dc:	d5 01       	movw	r26, r10
+
+	//RK xor  
+	LD RK, Z+  
+     3de:	01 90       	ld	r0, Z+
+	EOR TM2, RK  //ROL8 안했으므로 위치 고려하여 연산
+     3e0:	a0 25       	eor	r26, r0
+	LD RK, Z+   
+     3e2:	01 90       	ld	r0, Z+
+	EOR TM3, RK
+     3e4:	b0 25       	eor	r27, r0
+	LD RK, Z+   
+     3e6:	01 90       	ld	r0, Z+
+	EOR TM0, RK
+     3e8:	20 24       	eor	r2, r0
+	LD RK, Z+   
+     3ea:	01 90       	ld	r0, Z+
+	EOR TM1, RK
+     3ec:	30 24       	eor	r3, r0
+
+	//RC xor
+	EOR X10, RC  
+     3ee:	61 27       	eor	r22, r17
+		 
+	//ADD 연산
+	ADD X10, TM2   //ROL8 안했으므로 위치 고려하여 연산 
+     3f0:	6a 0f       	add	r22, r26
+	ADC X11, TM3
+     3f2:	7b 1f       	adc	r23, r27
+	ADC X12, TM0
+     3f4:	82 1d       	adc	r24, r2
+	ADC X13, TM1
+     3f6:	93 1d       	adc	r25, r3
+
+	//ROL1
+	LSL X10
+     3f8:	66 0f       	add	r22, r22
+	ROL X11
+     3fa:	77 1f       	adc	r23, r23
+	ROL X12
+     3fc:	88 1f       	adc	r24, r24
+	ROL X13
+     3fe:	99 1f       	adc	r25, r25
+	ADC X10, R1
+     400:	61 1d       	adc	r22, r1
+
+	INC RC
+     402:	13 95       	inc	r17
+
+	//ROUND7	
+	MOVW TM0, X30
+     404:	16 01       	movw	r2, r12
+	MOVW TM2, X32 
+     406:	d7 01       	movw	r26, r14
+
+	//ROL 1
+	LSL TM0
+     408:	22 0c       	add	r2, r2
+	ROL TM1
+     40a:	33 1c       	adc	r3, r3
+	ROL TM2
+     40c:	aa 1f       	adc	r26, r26
+	ROL TM3
+     40e:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     410:	21 1c       	adc	r2, r1
+
+	//RK XOR
+	LD RK, Z+ 
+     412:	01 90       	ld	r0, Z+
+	EOR TM0, RK
+     414:	20 24       	eor	r2, r0
+	LD RK, Z+
+     416:	01 90       	ld	r0, Z+
+	EOR TM1, RK
+     418:	30 24       	eor	r3, r0
+	LD RK, Z+ 
+     41a:	01 90       	ld	r0, Z+
+	EOR TM2, RK
+     41c:	a0 25       	eor	r26, r0
+	LD RK, Z+
+     41e:	01 90       	ld	r0, Z+
+	EOR TM3, RK
+     420:	b0 25       	eor	r27, r0
+	
+	//RC xor
+	EOR X23, RC
+     422:	b1 26       	eor	r11, r17
+
+	//ADD
+	ADD X23, TM0  //전 라운드에서 ROL8안했으므로 고려하여 연산
+     424:	b2 0c       	add	r11, r2
+	ADC X20, TM1
+     426:	83 1c       	adc	r8, r3
+	ADC X21, TM2
+     428:	9a 1e       	adc	r9, r26
+	ADC X22, TM3
+     42a:	ab 1e       	adc	r10, r27
+
+	MOVW TM0, X20  //16비트 상하위 ROL
+     42c:	14 01       	movw	r2, r8
+	MOVW X20, X22
+     42e:	45 01       	movw	r8, r10
+	MOVW X22, TM0
+     430:	51 01       	movw	r10, r2
+
+    INC RC
+     432:	13 95       	inc	r17
+
+	//ROUND8
+	MOVW TM0, X00  
+     434:	19 01       	movw	r2, r18
+	MOVW TM2, X02
+     436:	da 01       	movw	r26, r20
+
+	//RK xor  
+	LD RK, Z+  
+     438:	01 90       	ld	r0, Z+
+	EOR TM3, RK 
+     43a:	b0 25       	eor	r27, r0
+	LD RK, Z+   
+     43c:	01 90       	ld	r0, Z+
+	EOR TM0, RK
+     43e:	20 24       	eor	r2, r0
+	LD RK, Z+  
+     440:	01 90       	ld	r0, Z+
+	EOR TM1, RK 
+     442:	30 24       	eor	r3, r0
+	LD RK, Z+   
+     444:	01 90       	ld	r0, Z+
+	EOR TM2, RK
+     446:	a0 25       	eor	r26, r0
+		
+	//RC xor
+	EOR X30, RC  
+     448:	c1 26       	eor	r12, r17
+		 
+	//ADD 연산,전 라운드에서 ROL8안했으므로 ROL8생략하고 16비트 상하위 반전 
+	ADD X30, TM3   
+     44a:	cb 0e       	add	r12, r27
+	ADC X31, TM0
+     44c:	d2 1c       	adc	r13, r2
+	ADC X32, TM1
+     44e:	e3 1c       	adc	r14, r3
+	ADC X33, TM2
+     450:	fa 1e       	adc	r15, r26
+
+	//ROL1
+	LSL X30
+     452:	cc 0c       	add	r12, r12
+	ROL X31
+     454:	dd 1c       	adc	r13, r13
+	ROL X32
+     456:	ee 1c       	adc	r14, r14
+	ROL X33
+     458:	ff 1c       	adc	r15, r15
+	ADC X30, R1
+     45a:	c1 1c       	adc	r12, r1
+
+	INC RC
+     45c:	13 95       	inc	r17
+
+	CPSE RC,CNT
+     45e:	10 13       	cpse	r17, r16
+	RJMP LOOP
+     460:	4f cf       	rjmp	.-354    	; 0x300 <LOOP>
+
+	POP R27
+     462:	bf 91       	pop	r27
+	POP R26
+     464:	af 91       	pop	r26
+
+	ST Y+, X00
+     466:	29 93       	st	Y+, r18
+	ST Y+, X01
+     468:	39 93       	st	Y+, r19
+	ST Y+, X02
+     46a:	49 93       	st	Y+, r20
+	ST Y+, X03
+     46c:	59 93       	st	Y+, r21
+	ST Y+, X10
+     46e:	69 93       	st	Y+, r22
+	ST Y+, X11
+     470:	79 93       	st	Y+, r23
+	ST Y+, X12
+     472:	89 93       	st	Y+, r24
+	ST Y+, X13
+     474:	99 93       	st	Y+, r25
+	ST Y+, X20
+     476:	89 92       	st	Y+, r8
+	ST Y+, X21
+     478:	99 92       	st	Y+, r9
+	ST Y+, X22
+     47a:	a9 92       	st	Y+, r10
+	ST Y+, X23
+     47c:	b9 92       	st	Y+, r11
+	ST Y+, X30
+     47e:	c9 92       	st	Y+, r12
+	ST Y+, X31
+     480:	d9 92       	st	Y+, r13
+	ST Y+, X32
+     482:	e9 92       	st	Y+, r14
+	ST Y+, X33
+     484:	f9 92       	st	Y+, r15
+
+	POP R29
+     486:	df 91       	pop	r29
+	POP R28
+     488:	cf 91       	pop	r28
+	POP R17
+     48a:	1f 91       	pop	r17
+	POP R16
+     48c:	0f 91       	pop	r16
+	POP R15
+     48e:	ff 90       	pop	r15
+	POP R14
+     490:	ef 90       	pop	r14
+	POP R13
+     492:	df 90       	pop	r13
+	POP R12
+     494:	cf 90       	pop	r12
+	POP R11
+     496:	bf 90       	pop	r11
+	POP R10
+     498:	af 90       	pop	r10
+	POP R9
+     49a:	9f 90       	pop	r9
+	POP R8
+     49c:	8f 90       	pop	r8
+	POP R3
+     49e:	3f 90       	pop	r3
+	POP R2
+     4a0:	2f 90       	pop	r2
+
+
+     4a2:	08 95       	ret
+
+000004a4 <cham256_decrypt>:
+
+	#define CNT R16
+
+	cham256_decrypt:
+	
+	PUSH R2
+     4a4:	2f 92       	push	r2
+	PUSH R3
+     4a6:	3f 92       	push	r3
+	PUSH R8
+     4a8:	8f 92       	push	r8
+	PUSH R9
+     4aa:	9f 92       	push	r9
+	PUSH R10
+     4ac:	af 92       	push	r10
+	PUSH R11
+     4ae:	bf 92       	push	r11
+	PUSH R12
+     4b0:	cf 92       	push	r12
+	PUSH R13
+     4b2:	df 92       	push	r13
+	PUSH R14
+     4b4:	ef 92       	push	r14
+	PUSH R15
+     4b6:	ff 92       	push	r15
+	PUSH R16
+     4b8:	0f 93       	push	r16
+	PUSH R17
+     4ba:	1f 93       	push	r17
+	PUSH R28
+     4bc:	cf 93       	push	r28
+	PUSH R29
+     4be:	df 93       	push	r29
+
+	MOVW R28, R24   // derypted ypointer
+     4c0:	ec 01       	movw	r28, r24
+	MOVW R26, R22   // ct xpointer
+     4c2:	db 01       	movw	r26, r22
+	MOVW R30, R20   // rks zpointer
+     4c4:	fa 01       	movw	r30, r20
+
+	LD Y00, X+
+     4c6:	2d 91       	ld	r18, X+
+	LD Y01, X+
+     4c8:	3d 91       	ld	r19, X+
+	LD Y02, X+
+     4ca:	4d 91       	ld	r20, X+
+	LD Y03, X+
+     4cc:	5d 91       	ld	r21, X+
+	LD Y10, X+
+     4ce:	6d 91       	ld	r22, X+
+	LD Y11, X+
+     4d0:	7d 91       	ld	r23, X+
+	LD Y12, X+
+     4d2:	8d 91       	ld	r24, X+
+	LD Y13, X+
+     4d4:	9d 91       	ld	r25, X+
+	LD Y20, X+
+     4d6:	8d 90       	ld	r8, X+
+	LD Y21, X+
+     4d8:	9d 90       	ld	r9, X+
+	LD Y22, X+
+     4da:	ad 90       	ld	r10, X+
+	LD Y23, X+
+     4dc:	bd 90       	ld	r11, X+
+	LD Y30, X+
+     4de:	cd 90       	ld	r12, X+
+	LD Y31, X+
+     4e0:	dd 90       	ld	r13, X+
+	LD Y32, X+
+     4e2:	ed 90       	ld	r14, X+
+	LD Y33, X+
+     4e4:	fd 90       	ld	r15, X+
+
+	PUSH R26
+     4e6:	af 93       	push	r26
+	PUSH R27
+     4e8:	bf 93       	push	r27
+
+	LDI RC, 120
+     4ea:	18 e7       	ldi	r17, 0x78	; 120
+	CLR CNT
+     4ec:	00 27       	eor	r16, r16
+
+000004ee <LOOP>:
+	LOOP:
+	ANDI R30, 63
+     4ee:	ef 73       	andi	r30, 0x3F	; 63
+	SUBI R30, -32
+     4f0:	e0 5e       	subi	r30, 0xE0	; 224
+	//ROUND 1
+	MOVW TM0, Y00
+     4f2:	19 01       	movw	r2, r18
+	MOVW TM2, Y02
+     4f4:	da 01       	movw	r26, r20
+	
+	LD RK, -Z      //ROl 8 생략한 대신 위치에 맞춰 키 연산
+     4f6:	02 90       	ld	r0, -Z
+	EOR TM2, RK
+     4f8:	a0 25       	eor	r26, r0
+	LD RK, -Z
+     4fa:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     4fc:	30 24       	eor	r3, r0
+	LD RK, -Z 
+     4fe:	02 90       	ld	r0, -Z
+	EOR TM0, RK
+     500:	20 24       	eor	r2, r0
+	LD RK, -Z
+     502:	02 90       	ld	r0, -Z
+	EOR TM3, RK
+     504:	b0 25       	eor	r27, r0
+
+	//ROR1
+	BST Y30, 0
+     506:	c0 fa       	bst	r12, 0
+	LSR Y33
+     508:	f6 94       	lsr	r15
+	ROR Y32
+     50a:	e7 94       	ror	r14
+	ROR Y31 
+     50c:	d7 94       	ror	r13
+	ROR Y30
+     50e:	c7 94       	ror	r12
+	BLD Y33, 7
+     510:	f7 f8       	bld	r15, 7
+
+	//SUB, 위에서 ROl 8 생략한 대신 위치에 맞춰 연산
+	SUB Y30, TM3
+     512:	cb 1a       	sub	r12, r27
+	SBC Y31, TM0  
+     514:	d2 08       	sbc	r13, r2
+	SBC Y32, TM1
+     516:	e3 08       	sbc	r14, r3
+	SBC Y33, TM2
+     518:	fa 0a       	sbc	r15, r26
+
+	DEC RC
+     51a:	1a 95       	dec	r17
+	EOR Y30, RC 
+     51c:	c1 26       	eor	r12, r17
+
+	//ROUND 2
+	MOVW TM0, Y30
+     51e:	16 01       	movw	r2, r12
+	MOVW TM2, Y32
+     520:	d7 01       	movw	r26, r14
+
+	//ROL1
+	LSL TM0
+     522:	22 0c       	add	r2, r2
+	ROL TM1
+     524:	33 1c       	adc	r3, r3
+	ROL TM2
+     526:	aa 1f       	adc	r26, r26
+	ROL TM3
+     528:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     52a:	21 1c       	adc	r2, r1
+
+	//RK XOR 
+	LD RK, -Z
+     52c:	02 90       	ld	r0, -Z
+	EOR TM3, RK
+     52e:	b0 25       	eor	r27, r0
+	LD RK, -Z
+     530:	02 90       	ld	r0, -Z
+	EOR TM2, RK
+     532:	a0 25       	eor	r26, r0
+	LD RK, -Z 
+     534:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     536:	30 24       	eor	r3, r0
+	LD RK, -Z
+     538:	02 90       	ld	r0, -Z
+	EOR TM0, RK
+     53a:	20 24       	eor	r2, r0
+
+    //SUB, ROR 8을 생략하였으므로 위치 고려하여 연산
+	SUB Y21, TM0
+     53c:	92 18       	sub	r9, r2
+	SBC Y22, TM1  
+     53e:	a3 08       	sbc	r10, r3
+	SBC Y23, TM2
+     540:	ba 0a       	sbc	r11, r26
+	SBC Y20, TM3
+     542:	8b 0a       	sbc	r8, r27
+
+	//RC XOR 
+	DEC RC
+     544:	1a 95       	dec	r17
+	EOR Y21, RC 
+     546:	91 26       	eor	r9, r17
+
+	//ROUND 3
+	//전 라운드에서 ROR8 생략했으므로 ROL8도 생략가능
+	MOVW TM0, Y20
+     548:	14 01       	movw	r2, r8
+	MOVW TM2, Y22
+     54a:	d5 01       	movw	r26, r10
+
+	//RK XOR
+	LD RK, -Z 
+     54c:	02 90       	ld	r0, -Z
+	EOR TM3, RK
+     54e:	b0 25       	eor	r27, r0
+	LD RK, -Z
+     550:	02 90       	ld	r0, -Z
+	EOR TM2, RK
+     552:	a0 25       	eor	r26, r0
+	LD RK, -Z 
+     554:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     556:	30 24       	eor	r3, r0
+	LD RK, -Z
+     558:	02 90       	ld	r0, -Z
+	EOR TM0, RK
+     55a:	20 24       	eor	r2, r0
+	
+	//ROR1
+	BST Y10, 0
+     55c:	60 fb       	bst	r22, 0
+	LSR Y13
+     55e:	96 95       	lsr	r25
+	ROR Y12
+     560:	87 95       	ror	r24
+	ROR Y11 
+     562:	77 95       	ror	r23
+	ROR Y10
+     564:	67 95       	ror	r22
+	BLD Y13, 7
+     566:	97 f9       	bld	r25, 7
+
+	//SUB
+	SUB Y10, TM0 
+     568:	62 19       	sub	r22, r2
+	SBC Y11, TM1  
+     56a:	73 09       	sbc	r23, r3
+	SBC Y12, TM2
+     56c:	8a 0b       	sbc	r24, r26
+	SBC Y13, TM3
+     56e:	9b 0b       	sbc	r25, r27
+
+	DEC RC
+     570:	1a 95       	dec	r17
+	EOR Y10, RC
+     572:	61 27       	eor	r22, r17
+
+	//ROUND 4
+	MOVW TM0, Y10
+     574:	1b 01       	movw	r2, r22
+	MOVW TM2, Y12
+     576:	dc 01       	movw	r26, r24
+
+	//ROL1
+	LSL TM0
+     578:	22 0c       	add	r2, r2
+	ROL TM1
+     57a:	33 1c       	adc	r3, r3
+	ROL TM2
+     57c:	aa 1f       	adc	r26, r26
+	ROL TM3
+     57e:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     580:	21 1c       	adc	r2, r1
+
+	//RK XOR 
+	LD RK, -Z
+     582:	02 90       	ld	r0, -Z
+	EOR TM3, RK
+     584:	b0 25       	eor	r27, r0
+	LD RK, -Z
+     586:	02 90       	ld	r0, -Z
+	EOR TM2, RK
+     588:	a0 25       	eor	r26, r0
+	LD RK, -Z 
+     58a:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     58c:	30 24       	eor	r3, r0
+	LD RK, -Z
+     58e:	02 90       	ld	r0, -Z
+	EOR TM0, RK
+     590:	20 24       	eor	r2, r0
+
+	//SUB, ROR 8을 생략하였으므로 위치 고려하여 연산
+	SUB Y01, TM0
+     592:	32 19       	sub	r19, r2
+	SBC Y02, TM1
+     594:	43 09       	sbc	r20, r3
+	SBC Y03, TM2
+     596:	5a 0b       	sbc	r21, r26
+	SBC Y00, TM3
+     598:	2b 0b       	sbc	r18, r27
+
+	DEC RC
+     59a:	1a 95       	dec	r17
+	EOR Y01, RC
+     59c:	31 27       	eor	r19, r17
+
+	//ROUND 5 
+	//전 라운드에서 ROR8 생략했으므로 ROL8도 생략가능
+	MOVW TM0, Y00
+     59e:	19 01       	movw	r2, r18
+	MOVW TM2, Y02
+     5a0:	da 01       	movw	r26, r20
+
+	//RK XOR
+	LD RK, -Z 
+     5a2:	02 90       	ld	r0, -Z
+	EOR TM3, RK
+     5a4:	b0 25       	eor	r27, r0
+	LD RK, -Z
+     5a6:	02 90       	ld	r0, -Z
+	EOR TM2, RK
+     5a8:	a0 25       	eor	r26, r0
+	LD RK, -Z 
+     5aa:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     5ac:	30 24       	eor	r3, r0
+	LD RK, -Z
+     5ae:	02 90       	ld	r0, -Z
+	EOR TM0, RK
+     5b0:	20 24       	eor	r2, r0
+
+	//ROR1
+	BST Y30, 0
+     5b2:	c0 fa       	bst	r12, 0
+	LSR Y33
+     5b4:	f6 94       	lsr	r15
+	ROR Y32
+     5b6:	e7 94       	ror	r14
+	ROR Y31 
+     5b8:	d7 94       	ror	r13
+	ROR Y30
+     5ba:	c7 94       	ror	r12
+	BLD Y33, 7
+     5bc:	f7 f8       	bld	r15, 7
+
+	//SUB 연산
+	SUB Y30, TM0
+     5be:	c2 18       	sub	r12, r2
+	SBC Y31, TM1
+     5c0:	d3 08       	sbc	r13, r3
+	SBC Y32, TM2
+     5c2:	ea 0a       	sbc	r14, r26
+	SBC Y33, TM3
+     5c4:	fb 0a       	sbc	r15, r27
+
+	DEC RC
+     5c6:	1a 95       	dec	r17
+	EOR Y30, RC
+     5c8:	c1 26       	eor	r12, r17
+
+	//ROUND 6
+	MOVW TM0, Y30
+     5ca:	16 01       	movw	r2, r12
+	MOVW TM2, Y32
+     5cc:	d7 01       	movw	r26, r14
+
+	//ROL1
+	LSL TM0
+     5ce:	22 0c       	add	r2, r2
+	ROL TM1
+     5d0:	33 1c       	adc	r3, r3
+	ROL TM2
+     5d2:	aa 1f       	adc	r26, r26
+	ROL TM3
+     5d4:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     5d6:	21 1c       	adc	r2, r1
+
+	//RK XOR 
+	LD RK, -Z
+     5d8:	02 90       	ld	r0, -Z
+	EOR TM3, RK
+     5da:	b0 25       	eor	r27, r0
+	LD RK, -Z
+     5dc:	02 90       	ld	r0, -Z
+	EOR TM2, RK
+     5de:	a0 25       	eor	r26, r0
+	LD RK, -Z 
+     5e0:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     5e2:	30 24       	eor	r3, r0
+	LD RK, -Z
+     5e4:	02 90       	ld	r0, -Z
+	EOR TM0, RK
+     5e6:	20 24       	eor	r2, r0
+
+	//ROR8 대신 위치 맞춰 연산
+	SUB Y22, TM0
+     5e8:	a2 18       	sub	r10, r2
+	SBC Y23, TM1
+     5ea:	b3 08       	sbc	r11, r3
+	SBC Y20, TM2
+     5ec:	8a 0a       	sbc	r8, r26
+	SBC Y21, TM3
+     5ee:	9b 0a       	sbc	r9, r27
+
+	//전 라운드에서 안해준 ROR8과 이번 라운드 ROR8을 합춰 워드단위로 ROR8 수행
+	MOVW TM0, Y22
+     5f0:	15 01       	movw	r2, r10
+	MOVW Y22, Y20
+     5f2:	54 01       	movw	r10, r8
+	MOVW Y20, TM0
+     5f4:	41 01       	movw	r8, r2
+
+	DEC RC
+     5f6:	1a 95       	dec	r17
+	EOR Y20, RC
+     5f8:	81 26       	eor	r8, r17
+
+	//ROUND 7
+	//ROL 8
+	MOV TM0, Y23
+     5fa:	2b 2c       	mov	r2, r11
+	MOV TM1, Y20
+     5fc:	38 2c       	mov	r3, r8
+	MOV TM2, Y21
+     5fe:	a9 2d       	mov	r26, r9
+	MOV TM3, Y22
+     600:	ba 2d       	mov	r27, r10
+
+	//RK XOR 
+	LD RK, -Z
+     602:	02 90       	ld	r0, -Z
+	EOR TM3, RK
+     604:	b0 25       	eor	r27, r0
+	LD RK, -Z
+     606:	02 90       	ld	r0, -Z
+	EOR TM2, RK
+     608:	a0 25       	eor	r26, r0
+	LD RK, -Z 
+     60a:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     60c:	30 24       	eor	r3, r0
+	LD RK, -Z
+     60e:	02 90       	ld	r0, -Z
+	EOR TM0, RK
+     610:	20 24       	eor	r2, r0
+
+	//ROR1
+	BST Y10, 0
+     612:	60 fb       	bst	r22, 0
+	LSR Y13
+     614:	96 95       	lsr	r25
+	ROR Y12
+     616:	87 95       	ror	r24
+	ROR Y11 
+     618:	77 95       	ror	r23
+	ROR Y10
+     61a:	67 95       	ror	r22
+	BLD Y13, 7
+     61c:	97 f9       	bld	r25, 7
+
+	//SUB 연산
+	SUB Y10, TM0
+     61e:	62 19       	sub	r22, r2
+	SBC Y11, TM1
+     620:	73 09       	sbc	r23, r3
+	SBC Y12, TM2
+     622:	8a 0b       	sbc	r24, r26
+	SBC Y13, TM3
+     624:	9b 0b       	sbc	r25, r27
+
+	//RC XOR
+	DEC RC
+     626:	1a 95       	dec	r17
+	EOR Y10, RC
+     628:	61 27       	eor	r22, r17
+
+	//ROUND 8
+	MOVW TM0, Y10
+     62a:	1b 01       	movw	r2, r22
+	MOVW TM2, Y12
+     62c:	dc 01       	movw	r26, r24
+
+	//ROL1
+	LSL TM0
+     62e:	22 0c       	add	r2, r2
+	ROL TM1
+     630:	33 1c       	adc	r3, r3
+	ROL TM2
+     632:	aa 1f       	adc	r26, r26
+	ROL TM3
+     634:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     636:	21 1c       	adc	r2, r1
+
+	//RK XOR 
+	LD RK, -Z
+     638:	02 90       	ld	r0, -Z
+	EOR TM3, RK
+     63a:	b0 25       	eor	r27, r0
+	LD RK, -Z
+     63c:	02 90       	ld	r0, -Z
+	EOR TM2, RK
+     63e:	a0 25       	eor	r26, r0
+	LD RK, -Z 
+     640:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     642:	30 24       	eor	r3, r0
+	LD RK, -Z
+     644:	02 90       	ld	r0, -Z
+	EOR TM0, RK
+     646:	20 24       	eor	r2, r0
+
+	//ROR8 대신 위치 맞춰 연산
+	SUB Y02, TM0
+     648:	42 19       	sub	r20, r2
+	SBC Y03, TM1
+     64a:	53 09       	sbc	r21, r3
+	SBC Y00, TM2
+     64c:	2a 0b       	sbc	r18, r26
+	SBC Y01, TM3
+     64e:	3b 0b       	sbc	r19, r27
+
+	//전 라운드에서 안해준 ROR8과 이번 라운드 ROR8을 합춰 워드단위로 ROR8 수행
+	MOVW TM0, Y02
+     650:	1a 01       	movw	r2, r20
+	MOVW Y02, Y00
+     652:	a9 01       	movw	r20, r18
+	MOVW Y00, TM0
+     654:	91 01       	movw	r18, r2
+
+	DEC RC
+     656:	1a 95       	dec	r17
+	EOR Y00, RC  
+     658:	21 27       	eor	r18, r17
+	SUBI R30, -32
+     65a:	e0 5e       	subi	r30, 0xE0	; 224
+
+	CPSE RC,CNT
+     65c:	10 13       	cpse	r17, r16
+	RJMP LOOP
+     65e:	47 cf       	rjmp	.-370    	; 0x4ee <LOOP>
+
+	POP R27
+     660:	bf 91       	pop	r27
+	POP R26
+     662:	af 91       	pop	r26
+
+	ST Y+, Y00
+     664:	29 93       	st	Y+, r18
+	ST Y+, Y01
+     666:	39 93       	st	Y+, r19
+	ST Y+, Y02
+     668:	49 93       	st	Y+, r20
+	ST Y+, Y03
+     66a:	59 93       	st	Y+, r21
+	ST Y+, Y10
+     66c:	69 93       	st	Y+, r22
+	ST Y+, Y11
+     66e:	79 93       	st	Y+, r23
+	ST Y+, Y12
+     670:	89 93       	st	Y+, r24
+	ST Y+, Y13
+     672:	99 93       	st	Y+, r25
+	ST Y+, Y20
+     674:	89 92       	st	Y+, r8
+	ST Y+, Y21
+     676:	99 92       	st	Y+, r9
+	ST Y+, Y22
+     678:	a9 92       	st	Y+, r10
+	ST Y+, Y23
+     67a:	b9 92       	st	Y+, r11
+	ST Y+, Y30
+     67c:	c9 92       	st	Y+, r12
+	ST Y+, Y31
+     67e:	d9 92       	st	Y+, r13
+	ST Y+, Y32
+     680:	e9 92       	st	Y+, r14
+	ST Y+, Y33
+     682:	f9 92       	st	Y+, r15
+
+	POP R29
+     684:	df 91       	pop	r29
+	POP R28
+     686:	cf 91       	pop	r28
+	POP R17
+     688:	1f 91       	pop	r17
+	POP R16
+     68a:	0f 91       	pop	r16
+	POP R15
+     68c:	ff 90       	pop	r15
+	POP R14
+     68e:	ef 90       	pop	r14
+	POP R13
+     690:	df 90       	pop	r13
+	POP R12
+     692:	cf 90       	pop	r12
+	POP R11
+     694:	bf 90       	pop	r11
+	POP R10
+     696:	af 90       	pop	r10
+	POP R9
+     698:	9f 90       	pop	r9
+	POP R8
+     69a:	8f 90       	pop	r8
+	POP R3
+     69c:	3f 90       	pop	r3
+	POP R2
+     69e:	2f 90       	pop	r2
+
+     6a0:	08 95       	ret
+
+000006a2 <cham256_encrypt>:
+
+	#define CNT R16
+
+	cham256_encrypt:
+
+	PUSH R2
+     6a2:	2f 92       	push	r2
+	PUSH R3
+     6a4:	3f 92       	push	r3
+	PUSH R8
+     6a6:	8f 92       	push	r8
+	PUSH R9
+     6a8:	9f 92       	push	r9
+	PUSH R10
+     6aa:	af 92       	push	r10
+	PUSH R11
+     6ac:	bf 92       	push	r11
+	PUSH R12
+     6ae:	cf 92       	push	r12
+	PUSH R13
+     6b0:	df 92       	push	r13
+	PUSH R14
+     6b2:	ef 92       	push	r14
+	PUSH R15
+     6b4:	ff 92       	push	r15
+	PUSH R16
+     6b6:	0f 93       	push	r16
+	PUSH R17
+     6b8:	1f 93       	push	r17
+	PUSH R28
+     6ba:	cf 93       	push	r28
+	PUSH R29
+     6bc:	df 93       	push	r29
+
+	MOVW R28, R24   // encrypted ypointer
+     6be:	ec 01       	movw	r28, r24
+	MOVW R26, R22   // pt xpointer
+     6c0:	db 01       	movw	r26, r22
+	MOVW R30, R20   // rks zpointer
+     6c2:	fa 01       	movw	r30, r20
+
+	LD X00, X+
+     6c4:	2d 91       	ld	r18, X+
+	LD X01, X+
+     6c6:	3d 91       	ld	r19, X+
+	LD X02, X+
+     6c8:	4d 91       	ld	r20, X+
+	LD X03, X+
+     6ca:	5d 91       	ld	r21, X+
+	LD X10, X+
+     6cc:	6d 91       	ld	r22, X+
+	LD X11, X+
+     6ce:	7d 91       	ld	r23, X+
+	LD X12, X+
+     6d0:	8d 91       	ld	r24, X+
+	LD X13, X+	
+     6d2:	9d 91       	ld	r25, X+
+	LD X20, X+
+     6d4:	8d 90       	ld	r8, X+
+	LD X21, X+
+     6d6:	9d 90       	ld	r9, X+
+	LD X22, X+
+     6d8:	ad 90       	ld	r10, X+
+	LD X23, X+
+     6da:	bd 90       	ld	r11, X+
+	LD X30, X+
+     6dc:	cd 90       	ld	r12, X+
+	LD X31, X+
+     6de:	dd 90       	ld	r13, X+
+	LD X32, X+
+     6e0:	ed 90       	ld	r14, X+
+	LD X33, X+
+     6e2:	fd 90       	ld	r15, X+
+
+	PUSH R26
+     6e4:	af 93       	push	r26
+	PUSH R27
+     6e6:	bf 93       	push	r27
+
+	CLR RC 
+     6e8:	11 27       	eor	r17, r17
+	LDI CNT, 120
+     6ea:	08 e7       	ldi	r16, 0x78	; 120
+
+000006ec <LOOP>:
+
+	LOOP:
+	ANDI R30, 63
+     6ec:	ef 73       	andi	r30, 0x3F	; 63
+	//ROUND1	
+	MOVW TM0, X10 
+     6ee:	1b 01       	movw	r2, r22
+	MOVW TM2, X12
+     6f0:	dc 01       	movw	r26, r24
+
+	//ROL 1
+	LSL TM0
+     6f2:	22 0c       	add	r2, r2
+	ROL TM1
+     6f4:	33 1c       	adc	r3, r3
+	ROL TM2
+     6f6:	aa 1f       	adc	r26, r26
+	ROL TM3
+     6f8:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     6fa:	21 1c       	adc	r2, r1
+
+	//RK XOR
+	LD RK, Z+ 
+     6fc:	01 90       	ld	r0, Z+
+	EOR TM0, RK
+     6fe:	20 24       	eor	r2, r0
+	LD RK, Z+
+     700:	01 90       	ld	r0, Z+
+	EOR TM1, RK
+     702:	30 24       	eor	r3, r0
+	LD RK, Z+ 
+     704:	01 90       	ld	r0, Z+
+	EOR TM2, RK
+     706:	a0 25       	eor	r26, r0
+	LD RK, Z+
+     708:	01 90       	ld	r0, Z+
+	EOR TM3, RK
+     70a:	b0 25       	eor	r27, r0
+		
+	//RC xor
+	EOR X00, RC
+     70c:	21 27       	eor	r18, r17
+
+	//ADD
+	ADD X00, TM0
+     70e:	22 0d       	add	r18, r2
+	ADC X01, TM1
+     710:	33 1d       	adc	r19, r3
+	ADC X02, TM2
+     712:	4a 1f       	adc	r20, r26
+	ADC X03, TM3
+     714:	5b 1f       	adc	r21, r27
+
+    INC RC
+     716:	13 95       	inc	r17
+
+	//ROUND2
+	MOVW TM0, X20 
+     718:	14 01       	movw	r2, r8
+	MOVW TM2, X22 
+     71a:	d5 01       	movw	r26, r10
+
+	//RK xor  
+	LD RK, Z+  
+     71c:	01 90       	ld	r0, Z+
+	EOR TM3, RK  //ROL8 안했으므로 위치 고려하여 연산
+     71e:	b0 25       	eor	r27, r0
+	LD RK, Z+   
+     720:	01 90       	ld	r0, Z+
+	EOR TM0, RK
+     722:	20 24       	eor	r2, r0
+	LD RK, Z+   
+     724:	01 90       	ld	r0, Z+
+	EOR TM1, RK
+     726:	30 24       	eor	r3, r0
+	LD RK, Z+   
+     728:	01 90       	ld	r0, Z+
+	EOR TM2, RK
+     72a:	a0 25       	eor	r26, r0
+
+	//RC xor
+	EOR X10, RC  
+     72c:	61 27       	eor	r22, r17
+		 
+	//ADD 연산
+	ADD X10, TM3   //ROL8 안했으므로 위치 고려하여 연산 
+     72e:	6b 0f       	add	r22, r27
+	ADC X11, TM0
+     730:	72 1d       	adc	r23, r2
+	ADC X12, TM1
+     732:	83 1d       	adc	r24, r3
+	ADC X13, TM2
+     734:	9a 1f       	adc	r25, r26
+
+	//ROL1
+	LSL X10
+     736:	66 0f       	add	r22, r22
+	ROL X11
+     738:	77 1f       	adc	r23, r23
+	ROL X12
+     73a:	88 1f       	adc	r24, r24
+	ROL X13
+     73c:	99 1f       	adc	r25, r25
+	ADC X10, R1
+     73e:	61 1d       	adc	r22, r1
+
+	INC RC
+     740:	13 95       	inc	r17
+
+	//ROUND3	
+	MOVW TM0, X30
+     742:	16 01       	movw	r2, r12
+	MOVW TM2, X32 
+     744:	d7 01       	movw	r26, r14
+
+	//ROL 1
+	LSL TM0
+     746:	22 0c       	add	r2, r2
+	ROL TM1
+     748:	33 1c       	adc	r3, r3
+	ROL TM2
+     74a:	aa 1f       	adc	r26, r26
+	ROL TM3
+     74c:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     74e:	21 1c       	adc	r2, r1
+
+	//RK XOR
+	LD RK, Z+ 
+     750:	01 90       	ld	r0, Z+
+	EOR TM0, RK
+     752:	20 24       	eor	r2, r0
+	LD RK, Z+
+     754:	01 90       	ld	r0, Z+
+	EOR TM1, RK
+     756:	30 24       	eor	r3, r0
+	LD RK, Z+ 
+     758:	01 90       	ld	r0, Z+
+	EOR TM2, RK
+     75a:	a0 25       	eor	r26, r0
+	LD RK, Z+
+     75c:	01 90       	ld	r0, Z+
+	EOR TM3, RK
+     75e:	b0 25       	eor	r27, r0
+		
+	//RC xor
+	EOR X20, RC
+     760:	81 26       	eor	r8, r17
+
+	//ADD
+	ADD X20, TM0
+     762:	82 0c       	add	r8, r2
+	ADC X21, TM1
+     764:	93 1c       	adc	r9, r3
+	ADC X22, TM2
+     766:	aa 1e       	adc	r10, r26
+	ADC X23, TM3
+     768:	bb 1e       	adc	r11, r27
+
+    INC RC
+     76a:	13 95       	inc	r17
+
+	//ROUND4
+	MOVW TM0, X00  
+     76c:	19 01       	movw	r2, r18
+	MOVW TM2, X02
+     76e:	da 01       	movw	r26, r20
+
+	//RK xor  
+	LD RK, Z+   //전 라운드에서 ROL8안했으므로 ROL8생략하고 16비트 상하위 반전 
+     770:	01 90       	ld	r0, Z+
+	EOR TM2, RK 
+     772:	a0 25       	eor	r26, r0
+	LD RK, Z+   
+     774:	01 90       	ld	r0, Z+
+	EOR TM3, RK
+     776:	b0 25       	eor	r27, r0
+	LD RK, Z+  
+     778:	01 90       	ld	r0, Z+
+	EOR TM0, RK 
+     77a:	20 24       	eor	r2, r0
+	LD RK, Z+   
+     77c:	01 90       	ld	r0, Z+
+	EOR TM1, RK
+     77e:	30 24       	eor	r3, r0
+		
+	//RC xor
+	EOR X30, RC  
+     780:	c1 26       	eor	r12, r17
+		 
+	//ADD 연산,전 라운드에서 ROL8안했으므로 ROL8생략하고 16비트 상하위 반전 
+	ADD X30, TM2   
+     782:	ca 0e       	add	r12, r26
+	ADC X31, TM3
+     784:	db 1e       	adc	r13, r27
+	ADC X32, TM0
+     786:	e2 1c       	adc	r14, r2
+	ADC X33, TM1
+     788:	f3 1c       	adc	r15, r3
+
+	//ROL1
+	LSL X30
+     78a:	cc 0c       	add	r12, r12
+	ROL X31
+     78c:	dd 1c       	adc	r13, r13
+	ROL X32
+     78e:	ee 1c       	adc	r14, r14
+	ROL X33
+     790:	ff 1c       	adc	r15, r15
+	ADC X30, R1
+     792:	c1 1c       	adc	r12, r1
+
+	INC RC
+     794:	13 95       	inc	r17
+
+	//ROUND5
+	MOVW TM0, X10 
+     796:	1b 01       	movw	r2, r22
+	MOVW TM2, X12
+     798:	dc 01       	movw	r26, r24
+
+	//ROL 1
+	LSL TM0
+     79a:	22 0c       	add	r2, r2
+	ROL TM1
+     79c:	33 1c       	adc	r3, r3
+	ROL TM2
+     79e:	aa 1f       	adc	r26, r26
+	ROL TM3
+     7a0:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     7a2:	21 1c       	adc	r2, r1
+
+	//RK XOR
+	LD RK, Z+ 
+     7a4:	01 90       	ld	r0, Z+
+	EOR TM0, RK
+     7a6:	20 24       	eor	r2, r0
+	LD RK, Z+
+     7a8:	01 90       	ld	r0, Z+
+	EOR TM1, RK
+     7aa:	30 24       	eor	r3, r0
+	LD RK, Z+ 
+     7ac:	01 90       	ld	r0, Z+
+	EOR TM2, RK
+     7ae:	a0 25       	eor	r26, r0
+	LD RK, Z+
+     7b0:	01 90       	ld	r0, Z+
+	EOR TM3, RK
+     7b2:	b0 25       	eor	r27, r0
+		
+	//RC xor
+	EOR X03, RC  //ROL8 생략되어있는 상태
+     7b4:	51 27       	eor	r21, r17
+
+	//ADD
+	ADD X03, TM0//ROL8 생략되어있는 상태,위치 고려하여 연산 
+     7b6:	52 0d       	add	r21, r2
+	ADC X00, TM1
+     7b8:	23 1d       	adc	r18, r3
+	ADC X01, TM2
+     7ba:	3a 1f       	adc	r19, r26
+	ADC X02, TM3
+     7bc:	4b 1f       	adc	r20, r27
+
+	MOVW TM0, X00  //전 라운드 ROL8과 합쳐 16비트 상하위 이동 
+     7be:	19 01       	movw	r2, r18
+	MOVW X00, X02
+     7c0:	9a 01       	movw	r18, r20
+	MOVW X02, TM0
+     7c2:	a1 01       	movw	r20, r2
+
+    INC RC
+     7c4:	13 95       	inc	r17
+
+	//ROUND6
+	MOVW TM0, X20
+     7c6:	14 01       	movw	r2, r8
+	MOVW TM2, X22 
+     7c8:	d5 01       	movw	r26, r10
+
+	//RK xor  
+	LD RK, Z+  
+     7ca:	01 90       	ld	r0, Z+
+	EOR TM2, RK  //ROL8 안했으므로 위치 고려하여 연산
+     7cc:	a0 25       	eor	r26, r0
+	LD RK, Z+   
+     7ce:	01 90       	ld	r0, Z+
+	EOR TM3, RK
+     7d0:	b0 25       	eor	r27, r0
+	LD RK, Z+   
+     7d2:	01 90       	ld	r0, Z+
+	EOR TM0, RK
+     7d4:	20 24       	eor	r2, r0
+	LD RK, Z+   
+     7d6:	01 90       	ld	r0, Z+
+	EOR TM1, RK
+     7d8:	30 24       	eor	r3, r0
+
+	//RC xor
+	EOR X10, RC  
+     7da:	61 27       	eor	r22, r17
+		 
+	//ADD 연산
+	ADD X10, TM2   //ROL8 안했으므로 위치 고려하여 연산 
+     7dc:	6a 0f       	add	r22, r26
+	ADC X11, TM3
+     7de:	7b 1f       	adc	r23, r27
+	ADC X12, TM0
+     7e0:	82 1d       	adc	r24, r2
+	ADC X13, TM1
+     7e2:	93 1d       	adc	r25, r3
+
+	//ROL1
+	LSL X10
+     7e4:	66 0f       	add	r22, r22
+	ROL X11
+     7e6:	77 1f       	adc	r23, r23
+	ROL X12
+     7e8:	88 1f       	adc	r24, r24
+	ROL X13
+     7ea:	99 1f       	adc	r25, r25
+	ADC X10, R1
+     7ec:	61 1d       	adc	r22, r1
+
+	INC RC
+     7ee:	13 95       	inc	r17
+
+	//ROUND7	
+	MOVW TM0, X30
+     7f0:	16 01       	movw	r2, r12
+	MOVW TM2, X32 
+     7f2:	d7 01       	movw	r26, r14
+
+	//ROL 1
+	LSL TM0
+     7f4:	22 0c       	add	r2, r2
+	ROL TM1
+     7f6:	33 1c       	adc	r3, r3
+	ROL TM2
+     7f8:	aa 1f       	adc	r26, r26
+	ROL TM3
+     7fa:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     7fc:	21 1c       	adc	r2, r1
+
+	//RK XOR
+	LD RK, Z+ 
+     7fe:	01 90       	ld	r0, Z+
+	EOR TM0, RK
+     800:	20 24       	eor	r2, r0
+	LD RK, Z+
+     802:	01 90       	ld	r0, Z+
+	EOR TM1, RK
+     804:	30 24       	eor	r3, r0
+	LD RK, Z+ 
+     806:	01 90       	ld	r0, Z+
+	EOR TM2, RK
+     808:	a0 25       	eor	r26, r0
+	LD RK, Z+
+     80a:	01 90       	ld	r0, Z+
+	EOR TM3, RK
+     80c:	b0 25       	eor	r27, r0
+	
+	//RC xor
+	EOR X23, RC
+     80e:	b1 26       	eor	r11, r17
+
+	//ADD
+	ADD X23, TM0  //전 라운드에서 ROL8안했으므로 고려하여 연산
+     810:	b2 0c       	add	r11, r2
+	ADC X20, TM1
+     812:	83 1c       	adc	r8, r3
+	ADC X21, TM2
+     814:	9a 1e       	adc	r9, r26
+	ADC X22, TM3
+     816:	ab 1e       	adc	r10, r27
+
+	MOVW TM0, X20  //16비트 상하위 ROL
+     818:	14 01       	movw	r2, r8
+	MOVW X20, X22
+     81a:	45 01       	movw	r8, r10
+	MOVW X22, TM0
+     81c:	51 01       	movw	r10, r2
+
+    INC RC
+     81e:	13 95       	inc	r17
+
+	//ROUND8
+	MOVW TM0, X00  
+     820:	19 01       	movw	r2, r18
+	MOVW TM2, X02
+     822:	da 01       	movw	r26, r20
+
+	//RK xor  
+	LD RK, Z+  
+     824:	01 90       	ld	r0, Z+
+	EOR TM3, RK 
+     826:	b0 25       	eor	r27, r0
+	LD RK, Z+   
+     828:	01 90       	ld	r0, Z+
+	EOR TM0, RK
+     82a:	20 24       	eor	r2, r0
+	LD RK, Z+  
+     82c:	01 90       	ld	r0, Z+
+	EOR TM1, RK 
+     82e:	30 24       	eor	r3, r0
+	LD RK, Z+   
+     830:	01 90       	ld	r0, Z+
+	EOR TM2, RK
+     832:	a0 25       	eor	r26, r0
+		
+	//RC xor
+	EOR X30, RC  
+     834:	c1 26       	eor	r12, r17
+		 
+	//ADD 연산,전 라운드에서 ROL8안했으므로 ROL8생략하고 16비트 상하위 반전 
+	ADD X30, TM3   
+     836:	cb 0e       	add	r12, r27
+	ADC X31, TM0
+     838:	d2 1c       	adc	r13, r2
+	ADC X32, TM1
+     83a:	e3 1c       	adc	r14, r3
+	ADC X33, TM2
+     83c:	fa 1e       	adc	r15, r26
+
+	//ROL1
+	LSL X30
+     83e:	cc 0c       	add	r12, r12
+	ROL X31
+     840:	dd 1c       	adc	r13, r13
+	ROL X32
+     842:	ee 1c       	adc	r14, r14
+	ROL X33
+     844:	ff 1c       	adc	r15, r15
+	ADC X30, R1
+     846:	c1 1c       	adc	r12, r1
+
+	INC RC
+     848:	13 95       	inc	r17
+
+	CPSE RC,CNT
+     84a:	10 13       	cpse	r17, r16
+	RJMP LOOP
+     84c:	4f cf       	rjmp	.-354    	; 0x6ec <LOOP>
+
+	POP R27
+     84e:	bf 91       	pop	r27
+	POP R26
+     850:	af 91       	pop	r26
+
+	ST Y+, X00
+     852:	29 93       	st	Y+, r18
+	ST Y+, X01
+     854:	39 93       	st	Y+, r19
+	ST Y+, X02
+     856:	49 93       	st	Y+, r20
+	ST Y+, X03
+     858:	59 93       	st	Y+, r21
+	ST Y+, X10
+     85a:	69 93       	st	Y+, r22
+	ST Y+, X11
+     85c:	79 93       	st	Y+, r23
+	ST Y+, X12
+     85e:	89 93       	st	Y+, r24
+	ST Y+, X13
+     860:	99 93       	st	Y+, r25
+	ST Y+, X20
+     862:	89 92       	st	Y+, r8
+	ST Y+, X21
+     864:	99 92       	st	Y+, r9
+	ST Y+, X22
+     866:	a9 92       	st	Y+, r10
+	ST Y+, X23
+     868:	b9 92       	st	Y+, r11
+	ST Y+, X30
+     86a:	c9 92       	st	Y+, r12
+	ST Y+, X31
+     86c:	d9 92       	st	Y+, r13
+	ST Y+, X32
+     86e:	e9 92       	st	Y+, r14
+	ST Y+, X33
+     870:	f9 92       	st	Y+, r15
+
+	POP R29
+     872:	df 91       	pop	r29
+	POP R28
+     874:	cf 91       	pop	r28
+	POP R17
+     876:	1f 91       	pop	r17
+	POP R16
+     878:	0f 91       	pop	r16
+	POP R15
+     87a:	ff 90       	pop	r15
+	POP R14
+     87c:	ef 90       	pop	r14
+	POP R13
+     87e:	df 90       	pop	r13
+	POP R12
+     880:	cf 90       	pop	r12
+	POP R11
+     882:	bf 90       	pop	r11
+	POP R10
+     884:	af 90       	pop	r10
+	POP R9
+     886:	9f 90       	pop	r9
+	POP R8
+     888:	8f 90       	pop	r8
+	POP R2
+     88a:	2f 90       	pop	r2
+	POP R3
+     88c:	3f 90       	pop	r3
+
+
+	RET
+     88e:	08 95       	ret
+
+	CPSE RC,CNT
+     890:	10 13       	cpse	r17, r16
+	RJMP LOOP
+     892:	2c cf       	rjmp	.-424    	; 0x6ec <LOOP>
+
+	POP R27
+     894:	bf 91       	pop	r27
+	POP R26
+     896:	af 91       	pop	r26
+
+	ST Y+, X00
+     898:	29 93       	st	Y+, r18
+	ST Y+, X01
+     89a:	39 93       	st	Y+, r19
+	ST Y+, X02
+     89c:	49 93       	st	Y+, r20
+	ST Y+, X03
+     89e:	59 93       	st	Y+, r21
+	ST Y+, X10
+     8a0:	69 93       	st	Y+, r22
+	ST Y+, X11
+     8a2:	79 93       	st	Y+, r23
+	ST Y+, X12
+     8a4:	89 93       	st	Y+, r24
+	ST Y+, X13
+     8a6:	99 93       	st	Y+, r25
+	ST Y+, X20
+     8a8:	89 92       	st	Y+, r8
+	ST Y+, X21
+     8aa:	99 92       	st	Y+, r9
+	ST Y+, X22
+     8ac:	a9 92       	st	Y+, r10
+	ST Y+, X23
+     8ae:	b9 92       	st	Y+, r11
+	ST Y+, X30
+     8b0:	c9 92       	st	Y+, r12
+	ST Y+, X31
+     8b2:	d9 92       	st	Y+, r13
+	ST Y+, X32
+     8b4:	e9 92       	st	Y+, r14
+	ST Y+, X33
+     8b6:	f9 92       	st	Y+, r15
+
+	POP R29
+     8b8:	df 91       	pop	r29
+	POP R28
+     8ba:	cf 91       	pop	r28
+	POP R17
+     8bc:	1f 91       	pop	r17
+	POP R16
+     8be:	0f 91       	pop	r16
+	POP R15
+     8c0:	ff 90       	pop	r15
+	POP R14
+     8c2:	ef 90       	pop	r14
+	POP R13
+     8c4:	df 90       	pop	r13
+	POP R12
+     8c6:	cf 90       	pop	r12
+	POP R11
+     8c8:	bf 90       	pop	r11
+	POP R10
+     8ca:	af 90       	pop	r10
+	POP R9
+     8cc:	9f 90       	pop	r9
+	POP R8
+     8ce:	8f 90       	pop	r8
+	POP R3
+     8d0:	3f 90       	pop	r3
+	POP R2
+     8d2:	2f 90       	pop	r2
+
+
+     8d4:	08 95       	ret
+
+000008d6 <cham64_decrypt>:
+
+	#define CNT R16
+
+	cham64_decrypt:
+
+	PUSH R16
+     8d6:	0f 93       	push	r16
+	PUSH R17
+     8d8:	1f 93       	push	r17
+
+	PUSH R28
+     8da:	cf 93       	push	r28
+	PUSH R29
+     8dc:	df 93       	push	r29
+
+	MOVW R28, R24   // derypted ypointer
+     8de:	ec 01       	movw	r28, r24
+	MOVW R26, R22   // ct xpointer
+     8e0:	db 01       	movw	r26, r22
+	MOVW R30, R20   // rks zpointer
+     8e2:	fa 01       	movw	r30, r20
+
+	LD Y00, X+
+     8e4:	2d 91       	ld	r18, X+
+	LD Y01, X+
+     8e6:	3d 91       	ld	r19, X+
+	LD Y10, X+
+     8e8:	4d 91       	ld	r20, X+
+	LD Y11, X+
+     8ea:	5d 91       	ld	r21, X+
+	LD Y20, X+
+     8ec:	6d 91       	ld	r22, X+
+	LD Y21, X+
+     8ee:	7d 91       	ld	r23, X+
+	LD Y30, X+
+     8f0:	8d 91       	ld	r24, X+
+	LD Y31, X+
+     8f2:	9d 91       	ld	r25, X+
+
+	PUSH R26
+     8f4:	af 93       	push	r26
+	PUSH R27
+     8f6:	bf 93       	push	r27
+	
+	LDI RC, 88
+     8f8:	18 e5       	ldi	r17, 0x58	; 88
+	CLR CNT
+     8fa:	00 27       	eor	r16, r16
+
+000008fc <LOOP>:
+	LOOP:
+	ANDI R30, 31
+     8fc:	ef 71       	andi	r30, 0x1F	; 31
+	SUBI R30, -16
+     8fe:	e0 5f       	subi	r30, 0xF0	; 240
+	//ROUND 1
+	//ROL 8
+	MOV TM0,Y01
+     900:	a3 2f       	mov	r26, r19
+	MOV TM1,Y00
+     902:	b2 2f       	mov	r27, r18
+
+	//RK와 XOR
+	LD RK, -Z
+     904:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     906:	b0 25       	eor	r27, r0
+	LD RK, -Z 
+     908:	02 90       	ld	r0, -Z
+	EOR TM0, RK    
+     90a:	a0 25       	eor	r26, r0
+		
+	//ROR 1
+	BST Y30, 0
+     90c:	80 fb       	bst	r24, 0
+	LSR Y31
+     90e:	96 95       	lsr	r25
+	ROR Y30
+     910:	87 95       	ror	r24
+	BLD Y31, 7  
+     912:	97 f9       	bld	r25, 7
+
+	//SUB 연산
+	SUB Y30, TM0
+     914:	8a 1b       	sub	r24, r26
+	SBC Y31, TM1
+     916:	9b 0b       	sbc	r25, r27
+
+	//--rc와 xor
+	DEC RC
+     918:	1a 95       	dec	r17
+	EOR Y30, RC
+     91a:	81 27       	eor	r24, r17
+
+	//ROUND 2
+	MOVW TM0,Y30
+     91c:	dc 01       	movw	r26, r24
+		 
+	//ROL 1
+	LSL TM0
+     91e:	aa 0f       	add	r26, r26
+	ROL TM1
+     920:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     922:	a1 1d       	adc	r26, r1
+
+	//rk와 xor
+	LD RK, -Z
+     924:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     926:	b0 25       	eor	r27, r0
+	LD RK, -Z 
+     928:	02 90       	ld	r0, -Z
+	EOR TM0, RK 
+     92a:	a0 25       	eor	r26, r0
+
+	//SUB 연산, ROR8 생략한 것 고려하여 연산
+	SUB Y21, TM0
+     92c:	7a 1b       	sub	r23, r26
+	SBC Y20, TM1 
+     92e:	6b 0b       	sbc	r22, r27
+
+	//--rc xor
+	DEC RC
+     930:	1a 95       	dec	r17
+	EOR Y21, RC
+     932:	71 27       	eor	r23, r17
+
+	//ROUND 3
+	//ROL 8, 전 라운드에서 ror8생략했으므로 그대로 가져오면 rol8을 하는것과 같음
+	MOVW TM0, Y20 
+     934:	db 01       	movw	r26, r22
+	
+	//RK XOR
+	LD RK, -Z
+     936:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     938:	b0 25       	eor	r27, r0
+	LD RK, -Z 
+     93a:	02 90       	ld	r0, -Z
+	EOR TM0, RK    
+     93c:	a0 25       	eor	r26, r0
+		
+	//ROR 1
+	BST Y10, 0
+     93e:	40 fb       	bst	r20, 0
+	LSR Y11
+     940:	56 95       	lsr	r21
+	ROR Y10
+     942:	47 95       	ror	r20
+	BLD Y11, 7  
+     944:	57 f9       	bld	r21, 7
+
+	//SUB연산
+	SUB Y10, TM0
+     946:	4a 1b       	sub	r20, r26
+	SBC Y11, TM1
+     948:	5b 0b       	sbc	r21, r27
+
+	//--rc xor
+	DEC RC
+     94a:	1a 95       	dec	r17
+	EOR Y10, RC
+     94c:	41 27       	eor	r20, r17
+
+	//ROUND 4
+	MOVW TM0,Y10
+     94e:	da 01       	movw	r26, r20
+		 
+	//ROL 1
+	LSL TM0
+     950:	aa 0f       	add	r26, r26
+	ROL TM1
+     952:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     954:	a1 1d       	adc	r26, r1
+
+	//rk와 xor
+	LD RK, -Z
+     956:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     958:	b0 25       	eor	r27, r0
+	LD RK, -Z 
+     95a:	02 90       	ld	r0, -Z
+	EOR TM0, RK 
+     95c:	a0 25       	eor	r26, r0
+
+	//SUB 연산, ROR8 생략
+	SUB Y01, TM0
+     95e:	3a 1b       	sub	r19, r26
+	SBC Y00, TM1 
+     960:	2b 0b       	sbc	r18, r27
+
+	//--rc xor
+	DEC RC
+     962:	1a 95       	dec	r17
+	EOR Y01, RC
+     964:	31 27       	eor	r19, r17
+
+	//ROUND 5
+	//전 라운드에서 ROR8 생략했으므로 ROL8도 생략가능
+	MOVW TM0, Y00
+     966:	d9 01       	movw	r26, r18
+
+	//RK XOR
+	LD RK, -Z 
+     968:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     96a:	b0 25       	eor	r27, r0
+	LD RK, -Z
+     96c:	02 90       	ld	r0, -Z
+	EOR TM0, RK
+     96e:	a0 25       	eor	r26, r0
+
+	//ROR1
+	BST Y30, 0
+     970:	80 fb       	bst	r24, 0
+	LSR Y31
+     972:	96 95       	lsr	r25
+	ROR Y30
+     974:	87 95       	ror	r24
+	BLD Y31, 7  
+     976:	97 f9       	bld	r25, 7
+
+	//SUB 연산
+	SUB Y30, TM0
+     978:	8a 1b       	sub	r24, r26
+	SBC Y31, TM1
+     97a:	9b 0b       	sbc	r25, r27
+
+	//--RC XOR
+	DEC RC
+     97c:	1a 95       	dec	r17
+	EOR Y30, RC
+     97e:	81 27       	eor	r24, r17
+
+	//ROUND 6
+	MOVW TM0, Y30
+     980:	dc 01       	movw	r26, r24
+
+	//ROL1
+	LSL TM0
+     982:	aa 0f       	add	r26, r26
+	ROL TM1
+     984:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     986:	a1 1d       	adc	r26, r1
+
+	//RK XOR 
+	LD RK, -Z 
+     988:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     98a:	b0 25       	eor	r27, r0
+	LD RK, -Z
+     98c:	02 90       	ld	r0, -Z
+	EOR TM0, RK
+     98e:	a0 25       	eor	r26, r0
+
+	//ROR8 후 SUB 연산
+	SUB Y20, TM0
+     990:	6a 1b       	sub	r22, r26
+	SBC Y21, TM1
+     992:	7b 0b       	sbc	r23, r27
+
+	DEC RC
+     994:	1a 95       	dec	r17
+	EOR Y20, RC
+     996:	61 27       	eor	r22, r17
+
+	//ROUND 7
+	//ROL 8
+	MOV TM0, Y21
+     998:	a7 2f       	mov	r26, r23
+	MOV TM1, Y20
+     99a:	b6 2f       	mov	r27, r22
+
+	//RK XOR 
+	LD RK, -Z 
+     99c:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     99e:	b0 25       	eor	r27, r0
+	LD RK, -Z
+     9a0:	02 90       	ld	r0, -Z
+	EOR TM0, RK
+     9a2:	a0 25       	eor	r26, r0
+
+	//ROR1
+	BST Y10, 0
+     9a4:	40 fb       	bst	r20, 0
+	ROR Y11 
+     9a6:	57 95       	ror	r21
+	ROR Y10
+     9a8:	47 95       	ror	r20
+	BLD Y11, 7
+     9aa:	57 f9       	bld	r21, 7
+
+	//SUB 연산
+	SUB Y10, TM0
+     9ac:	4a 1b       	sub	r20, r26
+	SBC Y11, TM1
+     9ae:	5b 0b       	sbc	r21, r27
+
+	//--RC XOR
+	DEC RC
+     9b0:	1a 95       	dec	r17
+	EOR Y10, RC
+     9b2:	41 27       	eor	r20, r17
+
+	//ROUND 8
+	MOVW TM0, Y10
+     9b4:	da 01       	movw	r26, r20
+
+	//ROL1
+	LSL TM0
+     9b6:	aa 0f       	add	r26, r26
+	ROL TM1
+     9b8:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     9ba:	a1 1d       	adc	r26, r1
+
+	//RK XOR 
+	LD RK, -Z 
+     9bc:	02 90       	ld	r0, -Z
+	EOR TM1, RK
+     9be:	b0 25       	eor	r27, r0
+	LD RK, -Z
+     9c0:	02 90       	ld	r0, -Z
+	EOR TM0, RK
+     9c2:	a0 25       	eor	r26, r0
+
+	//ROR8 대신 위치 맞춰 연산
+	SUB Y00, TM0
+     9c4:	2a 1b       	sub	r18, r26
+	SBC Y01, TM1
+     9c6:	3b 0b       	sbc	r19, r27
+
+	DEC RC
+     9c8:	1a 95       	dec	r17
+	EOR Y00, RC  
+     9ca:	21 27       	eor	r18, r17
+	SUBI R30, -16
+     9cc:	e0 5f       	subi	r30, 0xF0	; 240
+
+	CPSE RC,CNT
+     9ce:	10 13       	cpse	r17, r16
+	RJMP LOOP
+     9d0:	95 cf       	rjmp	.-214    	; 0x8fc <LOOP>
+
+	POP R27
+     9d2:	bf 91       	pop	r27
+	POP R26
+     9d4:	af 91       	pop	r26
+
+	ST Y+, Y00
+     9d6:	29 93       	st	Y+, r18
+	ST Y+, Y01
+     9d8:	39 93       	st	Y+, r19
+	ST Y+, Y10
+     9da:	49 93       	st	Y+, r20
+	ST Y+, Y11
+     9dc:	59 93       	st	Y+, r21
+	ST Y+, Y20
+     9de:	69 93       	st	Y+, r22
+	ST Y+, Y21
+     9e0:	79 93       	st	Y+, r23
+	ST Y+, Y30
+     9e2:	89 93       	st	Y+, r24
+	ST Y+, Y31
+     9e4:	99 93       	st	Y+, r25
+
+	POP R29
+     9e6:	df 91       	pop	r29
+	POP R28
+     9e8:	cf 91       	pop	r28
+	
+	POP R17
+     9ea:	1f 91       	pop	r17
+	POP R16
+     9ec:	0f 91       	pop	r16
+
+     9ee:	08 95       	ret
+
+000009f0 <cham64_encrypt>:
+
+	#define CNT R16
+
+	cham64_encrypt:
+
+	PUSH R16
+     9f0:	0f 93       	push	r16
+	PUSH R17
+     9f2:	1f 93       	push	r17
+
+	PUSH R28
+     9f4:	cf 93       	push	r28
+	PUSH R29
+     9f6:	df 93       	push	r29
+
+	MOVW R28, R24   // encrypted ypointer
+     9f8:	ec 01       	movw	r28, r24
+	MOVW R26, R22   // pt xpointer
+     9fa:	db 01       	movw	r26, r22
+	MOVW R30, R20   // rks zpointer
+     9fc:	fa 01       	movw	r30, r20
+
+	LD X00, X+
+     9fe:	2d 91       	ld	r18, X+
+	LD X01, X+
+     a00:	3d 91       	ld	r19, X+
+	LD X10, X+
+     a02:	4d 91       	ld	r20, X+
+	LD X11, X+
+     a04:	5d 91       	ld	r21, X+
+	LD X20, X+
+     a06:	6d 91       	ld	r22, X+
+	LD X21, X+
+     a08:	7d 91       	ld	r23, X+
+	LD X30, X+
+     a0a:	8d 91       	ld	r24, X+
+	LD X31, X+
+     a0c:	9d 91       	ld	r25, X+
+
+	PUSH R26
+     a0e:	af 93       	push	r26
+	PUSH R27
+     a10:	bf 93       	push	r27
+
+	CLR RC 
+     a12:	11 27       	eor	r17, r17
+	LDI CNT, 88
+     a14:	08 e5       	ldi	r16, 0x58	; 88
+
+00000a16 <LOOP>:
+
+	LOOP:
+	ANDI R30, 31
+     a16:	ef 71       	andi	r30, 0x1F	; 31
+	
+	//ROUND1	
+	MOVW TM0,X10 
+     a18:	da 01       	movw	r26, r20
+
+	//ROL 1
+	LSL TM0
+     a1a:	aa 0f       	add	r26, r26
+	ROL TM1
+     a1c:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     a1e:	a1 1d       	adc	r26, r1
+
+	//RK XOR
+	LD RK, Z+ 
+     a20:	01 90       	ld	r0, Z+
+	EOR TM0, RK
+     a22:	a0 25       	eor	r26, r0
+	LD RK, Z+
+     a24:	01 90       	ld	r0, Z+
+	EOR TM1, RK
+     a26:	b0 25       	eor	r27, r0
+		
+	//RC xor
+	EOR X00, RC
+     a28:	21 27       	eor	r18, r17
+
+	//ADD
+	ADD X00, TM0
+     a2a:	2a 0f       	add	r18, r26
+	ADC X01, TM1
+     a2c:	3b 1f       	adc	r19, r27
+
+    INC RC
+     a2e:	13 95       	inc	r17
+
+	//ROUND2
+	MOVW TM0, X20  
+     a30:	db 01       	movw	r26, r22
+
+	//RK xor  
+	LD RK, Z+  
+     a32:	01 90       	ld	r0, Z+
+	EOR TM1, RK  //ROL8 안했으므로 상하위비트 위치 반전  
+     a34:	b0 25       	eor	r27, r0
+	LD RK, Z+   
+     a36:	01 90       	ld	r0, Z+
+	EOR TM0, RK
+     a38:	a0 25       	eor	r26, r0
+		
+	//RC xor
+	EOR X10, RC  
+     a3a:	41 27       	eor	r20, r17
+		 
+	//ADD 연산
+	ADD X10, TM1   //ROL8 안했으므로 상하위비트 위치 반전  
+     a3c:	4b 0f       	add	r20, r27
+	ADC X11, TM0
+     a3e:	5a 1f       	adc	r21, r26
+
+	//ROL1
+	LSL X10
+     a40:	44 0f       	add	r20, r20
+	ROL X11
+     a42:	55 1f       	adc	r21, r21
+	ADC X10, R1
+     a44:	41 1d       	adc	r20, r1
+
+	INC RC
+     a46:	13 95       	inc	r17
+
+	//ROUND3	
+	MOVW TM0,X30 
+     a48:	dc 01       	movw	r26, r24
+
+	//ROL 1
+	LSL TM0
+     a4a:	aa 0f       	add	r26, r26
+	ROL TM1
+     a4c:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     a4e:	a1 1d       	adc	r26, r1
+
+	//RK XOR
+	LD RK, Z+ 
+     a50:	01 90       	ld	r0, Z+
+	EOR TM0, RK
+     a52:	a0 25       	eor	r26, r0
+	LD RK, Z+
+     a54:	01 90       	ld	r0, Z+
+	EOR TM1, RK
+     a56:	b0 25       	eor	r27, r0
+		
+	//RC xor
+	EOR X20, RC
+     a58:	61 27       	eor	r22, r17
+
+	//ADD
+	ADD X20, TM0
+     a5a:	6a 0f       	add	r22, r26
+	ADC X21, TM1
+     a5c:	7b 1f       	adc	r23, r27
+
+    INC RC
+     a5e:	13 95       	inc	r17
+
+	//ROUND4
+	//전 라운드에서 ROL8안했으므로 ROL8생략가능 
+	MOVW TM0, X00  
+     a60:	d9 01       	movw	r26, r18
+
+	//RK xor  
+	LD RK, Z+  
+     a62:	01 90       	ld	r0, Z+
+	EOR TM0, RK 
+     a64:	a0 25       	eor	r26, r0
+	LD RK, Z+   
+     a66:	01 90       	ld	r0, Z+
+	EOR TM1, RK
+     a68:	b0 25       	eor	r27, r0
+		
+	//RC xor
+	EOR X30, RC  
+     a6a:	81 27       	eor	r24, r17
+		 
+	//ADD 연산
+	ADD X30, TM0 
+     a6c:	8a 0f       	add	r24, r26
+	ADC X31, TM1
+     a6e:	9b 1f       	adc	r25, r27
+
+	//ROL1
+	LSL X30
+     a70:	88 0f       	add	r24, r24
+	ROL X31
+     a72:	99 1f       	adc	r25, r25
+	ADC X30, R1
+     a74:	81 1d       	adc	r24, r1
+
+	INC RC
+     a76:	13 95       	inc	r17
+
+	//ROUND5	
+	MOVW TM0, X10 
+     a78:	da 01       	movw	r26, r20
+
+	//ROL 1
+	LSL TM0
+     a7a:	aa 0f       	add	r26, r26
+	ROL TM1
+     a7c:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     a7e:	a1 1d       	adc	r26, r1
+
+	//RK XOR
+	LD RK, Z+ 
+     a80:	01 90       	ld	r0, Z+
+	EOR TM0, RK
+     a82:	a0 25       	eor	r26, r0
+	LD RK, Z+
+     a84:	01 90       	ld	r0, Z+
+	EOR TM1, RK
+     a86:	b0 25       	eor	r27, r0
+		
+	//RC xor,위에서 ROL8 생략하였으므로 위치 고려하여 연산
+	EOR X01, RC
+     a88:	31 27       	eor	r19, r17
+
+	//ADD, 
+	ADD X01, TM0 //ROL8 안했으므로 상하위비트 위치 반전  
+     a8a:	3a 0f       	add	r19, r26
+	ADC X00, TM1
+     a8c:	2b 1f       	adc	r18, r27
+
+    INC RC
+     a8e:	13 95       	inc	r17
+
+	//ROUND6
+	//전 라운드에서 ROL8안했으므로 ROL8생략가능 
+	MOVW TM0, X20  
+     a90:	db 01       	movw	r26, r22
+
+	//RK xor  
+	LD RK, Z+  
+     a92:	01 90       	ld	r0, Z+
+	EOR TM0, RK 
+     a94:	a0 25       	eor	r26, r0
+	LD RK, Z+   
+     a96:	01 90       	ld	r0, Z+
+	EOR TM1, RK
+     a98:	b0 25       	eor	r27, r0
+		
+	//RC xor
+	EOR X10, RC  
+     a9a:	41 27       	eor	r20, r17
+		 
+	//ADD 연산
+	ADD X10, TM0 
+     a9c:	4a 0f       	add	r20, r26
+	ADC X11, TM1
+     a9e:	5b 1f       	adc	r21, r27
+
+	//ROL1
+	LSL X10
+     aa0:	44 0f       	add	r20, r20
+	ROL X11
+     aa2:	55 1f       	adc	r21, r21
+	ADC X10, R1
+     aa4:	41 1d       	adc	r20, r1
+
+	INC RC
+     aa6:	13 95       	inc	r17
+
+	//ROUND7
+	MOVW TM0,X30 
+     aa8:	dc 01       	movw	r26, r24
+
+	//ROL 1
+	LSL TM0
+     aaa:	aa 0f       	add	r26, r26
+	ROL TM1
+     aac:	bb 1f       	adc	r27, r27
+	ADC TM0, R1
+     aae:	a1 1d       	adc	r26, r1
+
+	//RK XOR
+	LD RK, Z+ 
+     ab0:	01 90       	ld	r0, Z+
+	EOR TM0, RK
+     ab2:	a0 25       	eor	r26, r0
+	LD RK, Z+
+     ab4:	01 90       	ld	r0, Z+
+	EOR TM1, RK
+     ab6:	b0 25       	eor	r27, r0
+		
+	//RC xor,위에서 ROL8 생략하였으므로 위치 고려하여 연산
+	EOR X21, RC  
+     ab8:	71 27       	eor	r23, r17
+
+	//ADD
+	ADD X21, TM0  //ROL8 안했으므로 상하위비트 위치 반전   
+     aba:	7a 0f       	add	r23, r26
+	ADC X20, TM1
+     abc:	6b 1f       	adc	r22, r27
+
+    INC RC
+     abe:	13 95       	inc	r17
+
+	//ROUND8
+	//전 라운드에서 ROL8안했으므로 ROL8생략가능 
+	MOVW TM0, X00  
+     ac0:	d9 01       	movw	r26, r18
+
+	//RK xor  
+	LD RK, Z+  
+     ac2:	01 90       	ld	r0, Z+
+	EOR TM1, RK    //ROL8 안했으므로 상하위비트 위치 반전  
+     ac4:	b0 25       	eor	r27, r0
+	LD RK, Z+   
+     ac6:	01 90       	ld	r0, Z+
+	EOR TM0, RK
+     ac8:	a0 25       	eor	r26, r0
+		
+	//RC xor
+	EOR X30, RC  
+     aca:	81 27       	eor	r24, r17
+		 
+	//ADD 연산
+	ADD X30, TM1 //ROL8 안했으므로 상하위비트 위치 반전  
+     acc:	8b 0f       	add	r24, r27
+	ADC X31, TM0
+     ace:	9a 1f       	adc	r25, r26
+
+	//ROL1
+	LSL X30
+     ad0:	88 0f       	add	r24, r24
+	ROL X31
+     ad2:	99 1f       	adc	r25, r25
+	ADC X30, R1
+     ad4:	81 1d       	adc	r24, r1
+
+	INC RC
+     ad6:	13 95       	inc	r17
+
+	CPSE RC,CNT
+     ad8:	10 13       	cpse	r17, r16
+	RJMP LOOP
+     ada:	9d cf       	rjmp	.-198    	; 0xa16 <LOOP>
+
+	POP R27
+     adc:	bf 91       	pop	r27
+	POP R26
+     ade:	af 91       	pop	r26
+
+	ST Y+, X00
+     ae0:	29 93       	st	Y+, r18
+	ST Y+, X01
+     ae2:	39 93       	st	Y+, r19
+	ST Y+, X10
+     ae4:	49 93       	st	Y+, r20
+	ST Y+, X11
+     ae6:	59 93       	st	Y+, r21
+	ST Y+, X20
+     ae8:	69 93       	st	Y+, r22
+	ST Y+, X21
+     aea:	79 93       	st	Y+, r23
+	ST Y+, X30
+     aec:	89 93       	st	Y+, r24
+	ST Y+, X31
+     aee:	99 93       	st	Y+, r25
+
+	POP R29
+     af0:	df 91       	pop	r29
+	POP R28
+     af2:	cf 91       	pop	r28
+	
+	POP R17
+     af4:	1f 91       	pop	r17
+	POP R16
+     af6:	0f 91       	pop	r16
+
+
+     af8:	08 95       	ret
+
+00000afa <cham64_keygen>:
+{
+	return (value >> rot) | (value << (32 - rot));
+}
+
+void cham64_keygen(uint8_t* rks, const uint8_t* mk)
+{
+     afa:	8f 92       	push	r8
+     afc:	9f 92       	push	r9
+     afe:	af 92       	push	r10
+     b00:	bf 92       	push	r11
+     b02:	cf 92       	push	r12
+     b04:	df 92       	push	r13
+     b06:	ef 92       	push	r14
+     b08:	ff 92       	push	r15
+     b0a:	0f 93       	push	r16
+     b0c:	1f 93       	push	r17
+     b0e:	cf 93       	push	r28
+     b10:	df 93       	push	r29
+     b12:	fb 01       	movw	r30, r22
+     b14:	dc 01       	movw	r26, r24
+     b16:	bc 01       	movw	r22, r24
+     b18:	60 5f       	subi	r22, 0xF0	; 240
+     b1a:	7f 4f       	sbci	r23, 0xFF	; 255
+     b1c:	48 e0       	ldi	r20, 0x08	; 8
+     b1e:	50 e0       	ldi	r21, 0x00	; 0
+	const uint16_t* key = (uint16_t*) mk;
+	uint16_t* rk = (uint16_t*) rks;
+
+	for (size_t i = 0; i < 8; ++i) {
+		rk[i] = key[i] ^ rol16(key[i], 1);
+     b20:	20 81       	ld	r18, Z
+     b22:	31 81       	ldd	r19, Z+1	; 0x01
+     b24:	89 01       	movw	r16, r18
+     b26:	00 0f       	add	r16, r16
+     b28:	11 1f       	adc	r17, r17
+     b2a:	01 1d       	adc	r16, r1
+     b2c:	20 27       	eor	r18, r16
+     b2e:	31 27       	eor	r19, r17
+     b30:	11 96       	adiw	r26, 0x01	; 1
+     b32:	3c 93       	st	X, r19
+     b34:	2e 93       	st	-X, r18
+		rk[(i+8)^(0x1)] = rk[i] ^ rol16(key[i], 11);
+     b36:	8a 01       	movw	r16, r20
+     b38:	c1 e0       	ldi	r28, 0x01	; 1
+     b3a:	0c 27       	eor	r16, r28
+     b3c:	00 0f       	add	r16, r16
+     b3e:	11 1f       	adc	r17, r17
+     b40:	08 0f       	add	r16, r24
+     b42:	19 1f       	adc	r17, r25
+     b44:	d1 80       	ldd	r13, Z+1	; 0x01
+     b46:	ad 2c       	mov	r10, r13
+     b48:	aa 0c       	add	r10, r10
+     b4a:	aa 0c       	add	r10, r10
+     b4c:	aa 0c       	add	r10, r10
+     b4e:	c0 80       	ld	r12, Z
+     b50:	bc 2c       	mov	r11, r12
+     b52:	b2 94       	swap	r11
+     b54:	b6 94       	lsr	r11
+     b56:	d7 e0       	ldi	r29, 0x07	; 7
+     b58:	bd 22       	and	r11, r29
+     b5a:	8a 2c       	mov	r8, r10
+     b5c:	8b 28       	or	r8, r11
+     b5e:	cc 0c       	add	r12, r12
+     b60:	cc 0c       	add	r12, r12
+     b62:	cc 0c       	add	r12, r12
+     b64:	d2 94       	swap	r13
+     b66:	d6 94       	lsr	r13
+     b68:	c7 e0       	ldi	r28, 0x07	; 7
+     b6a:	dc 22       	and	r13, r28
+     b6c:	9c 2c       	mov	r9, r12
+     b6e:	9d 28       	or	r9, r13
+     b70:	28 25       	eor	r18, r8
+     b72:	39 25       	eor	r19, r9
+     b74:	e8 01       	movw	r28, r16
+     b76:	39 83       	std	Y+1, r19	; 0x01
+     b78:	28 83       	st	Y, r18
+		rk[i] ^= rol16(key[i], 8);
+     b7a:	20 81       	ld	r18, Z
+     b7c:	31 81       	ldd	r19, Z+1	; 0x01
+     b7e:	32 96       	adiw	r30, 0x02	; 2
+     b80:	32 27       	eor	r19, r18
+     b82:	23 27       	eor	r18, r19
+     b84:	32 27       	eor	r19, r18
+     b86:	0d 91       	ld	r16, X+
+     b88:	1c 91       	ld	r17, X
+     b8a:	11 97       	sbiw	r26, 0x01	; 1
+     b8c:	20 27       	eor	r18, r16
+     b8e:	31 27       	eor	r19, r17
+     b90:	2d 93       	st	X+, r18
+     b92:	3d 93       	st	X+, r19
+     b94:	4f 5f       	subi	r20, 0xFF	; 255
+     b96:	5f 4f       	sbci	r21, 0xFF	; 255
+void cham64_keygen(uint8_t* rks, const uint8_t* mk)
+{
+	const uint16_t* key = (uint16_t*) mk;
+	uint16_t* rk = (uint16_t*) rks;
+
+	for (size_t i = 0; i < 8; ++i) {
+     b98:	a6 17       	cp	r26, r22
+     b9a:	b7 07       	cpc	r27, r23
+     b9c:	09 f6       	brne	.-126    	; 0xb20 <cham64_keygen+0x26>
+		rk[i] = key[i] ^ rol16(key[i], 1);
+		rk[(i+8)^(0x1)] = rk[i] ^ rol16(key[i], 11);
+		rk[i] ^= rol16(key[i], 8);
+	}
+	
+}
+     b9e:	df 91       	pop	r29
+     ba0:	cf 91       	pop	r28
+     ba2:	1f 91       	pop	r17
+     ba4:	0f 91       	pop	r16
+     ba6:	ff 90       	pop	r15
+     ba8:	ef 90       	pop	r14
+     baa:	df 90       	pop	r13
+     bac:	cf 90       	pop	r12
+     bae:	bf 90       	pop	r11
+     bb0:	af 90       	pop	r10
+     bb2:	9f 90       	pop	r9
+     bb4:	8f 90       	pop	r8
+     bb6:	08 95       	ret
+
+00000bb8 <cham64_ctr_encrypt>:
+
+void cham64_ctr_encrypt(uint8_t* dst, const uint8_t* src, const uint16_t src_len, const uint8_t* iv, const uint8_t* rks)
+{
+     bb8:	6f 92       	push	r6
+     bba:	7f 92       	push	r7
+     bbc:	8f 92       	push	r8
+     bbe:	9f 92       	push	r9
+     bc0:	af 92       	push	r10
+     bc2:	bf 92       	push	r11
+     bc4:	cf 92       	push	r12
+     bc6:	df 92       	push	r13
+     bc8:	ef 92       	push	r14
+     bca:	ff 92       	push	r15
+     bcc:	0f 93       	push	r16
+     bce:	1f 93       	push	r17
+     bd0:	cf 93       	push	r28
+     bd2:	df 93       	push	r29
+     bd4:	cd b7       	in	r28, 0x3d	; 61
+     bd6:	de b7       	in	r29, 0x3e	; 62
+     bd8:	60 97       	sbiw	r28, 0x10	; 16
+     bda:	0f b6       	in	r0, 0x3f	; 63
+     bdc:	f8 94       	cli
+     bde:	de bf       	out	0x3e, r29	; 62
+     be0:	0f be       	out	0x3f, r0	; 63
+     be2:	cd bf       	out	0x3d, r28	; 61
+     be4:	f9 01       	movw	r30, r18
+	uint8_t temp_input[8];
+	uint8_t temp_output[8]={0};
+     be6:	38 e0       	ldi	r19, 0x08	; 8
+     be8:	de 01       	movw	r26, r28
+     bea:	11 96       	adiw	r26, 0x01	; 1
+     bec:	5d 01       	movw	r10, r26
+     bee:	23 2f       	mov	r18, r19
+     bf0:	1d 92       	st	X+, r1
+     bf2:	2a 95       	dec	r18
+     bf4:	e9 f7       	brne	.-6      	; 0xbf0 <cham64_ctr_encrypt+0x38>
+	memcpy(temp_input,iv,8);
+     bf6:	de 01       	movw	r26, r28
+     bf8:	19 96       	adiw	r26, 0x09	; 9
+     bfa:	01 90       	ld	r0, Z+
+     bfc:	0d 92       	st	X+, r0
+     bfe:	3a 95       	dec	r19
+     c00:	e1 f7       	brne	.-8      	; 0xbfa <cham64_ctr_encrypt+0x42>
+	
+	uint16_t* temp_count=(uint16_t*)temp_input;
+	
+	for(int i=0;i<src_len/8;i++){
+     c02:	56 95       	lsr	r21
+     c04:	47 95       	ror	r20
+     c06:	56 95       	lsr	r21
+     c08:	47 95       	ror	r20
+     c0a:	56 95       	lsr	r21
+     c0c:	47 95       	ror	r20
+     c0e:	41 15       	cp	r20, r1
+     c10:	51 05       	cpc	r21, r1
+     c12:	79 f1       	breq	.+94     	; 0xc72 <cham64_ctr_encrypt+0xba>
+     c14:	48 01       	movw	r8, r16
+     c16:	7b 01       	movw	r14, r22
+     c18:	6c 01       	movw	r12, r24
+     c1a:	44 0f       	add	r20, r20
+     c1c:	55 1f       	adc	r21, r21
+     c1e:	44 0f       	add	r20, r20
+     c20:	55 1f       	adc	r21, r21
+     c22:	44 0f       	add	r20, r20
+     c24:	55 1f       	adc	r21, r21
+     c26:	3b 01       	movw	r6, r22
+     c28:	64 0e       	add	r6, r20
+     c2a:	75 1e       	adc	r7, r21
+     c2c:	8e 01       	movw	r16, r28
+     c2e:	07 5f       	subi	r16, 0xF7	; 247
+     c30:	1f 4f       	sbci	r17, 0xFF	; 255
+		cham64_encrypt(temp_output,temp_input,rks);   //iv를 encrypt
+     c32:	a4 01       	movw	r20, r8
+     c34:	b8 01       	movw	r22, r16
+     c36:	c5 01       	movw	r24, r10
+     c38:	db de       	rcall	.-586    	; 0x9f0 <cham64_encrypt>
+     c3a:	f5 01       	movw	r30, r10
+     c3c:	96 01       	movw	r18, r12
+     c3e:	a7 01       	movw	r20, r14
+		
+		for(int j=0;j<8;j++){
+			dst[i*8+j] = temp_output[j]^src[i*8+j]; //encrypt 거친 iv와 pt xor
+     c40:	91 91       	ld	r25, Z+
+     c42:	da 01       	movw	r26, r20
+     c44:	8d 91       	ld	r24, X+
+     c46:	ad 01       	movw	r20, r26
+     c48:	89 27       	eor	r24, r25
+     c4a:	d9 01       	movw	r26, r18
+     c4c:	8d 93       	st	X+, r24
+     c4e:	9d 01       	movw	r18, r26
+	uint16_t* temp_count=(uint16_t*)temp_input;
+	
+	for(int i=0;i<src_len/8;i++){
+		cham64_encrypt(temp_output,temp_input,rks);   //iv를 encrypt
+		
+		for(int j=0;j<8;j++){
+     c50:	0e 17       	cp	r16, r30
+     c52:	1f 07       	cpc	r17, r31
+     c54:	a9 f7       	brne	.-22     	; 0xc40 <cham64_ctr_encrypt+0x88>
+			dst[i*8+j] = temp_output[j]^src[i*8+j]; //encrypt 거친 iv와 pt xor
+		}
+		
+		temp_count[0]++;            //counter 값 증가
+     c56:	89 85       	ldd	r24, Y+9	; 0x09
+     c58:	9a 85       	ldd	r25, Y+10	; 0x0a
+     c5a:	01 96       	adiw	r24, 0x01	; 1
+     c5c:	9a 87       	std	Y+10, r25	; 0x0a
+     c5e:	89 87       	std	Y+9, r24	; 0x09
+     c60:	b8 e0       	ldi	r27, 0x08	; 8
+     c62:	eb 0e       	add	r14, r27
+     c64:	f1 1c       	adc	r15, r1
+     c66:	28 e0       	ldi	r18, 0x08	; 8
+     c68:	c2 0e       	add	r12, r18
+     c6a:	d1 1c       	adc	r13, r1
+	uint8_t temp_output[8]={0};
+	memcpy(temp_input,iv,8);
+	
+	uint16_t* temp_count=(uint16_t*)temp_input;
+	
+	for(int i=0;i<src_len/8;i++){
+     c6c:	e6 14       	cp	r14, r6
+     c6e:	f7 04       	cpc	r15, r7
+     c70:	01 f7       	brne	.-64     	; 0xc32 <cham64_ctr_encrypt+0x7a>
+			dst[i*8+j] = temp_output[j]^src[i*8+j]; //encrypt 거친 iv와 pt xor
+		}
+		
+		temp_count[0]++;            //counter 값 증가
+	}
+}
+     c72:	60 96       	adiw	r28, 0x10	; 16
+     c74:	0f b6       	in	r0, 0x3f	; 63
+     c76:	f8 94       	cli
+     c78:	de bf       	out	0x3e, r29	; 62
+     c7a:	0f be       	out	0x3f, r0	; 63
+     c7c:	cd bf       	out	0x3d, r28	; 61
+     c7e:	df 91       	pop	r29
+     c80:	cf 91       	pop	r28
+     c82:	1f 91       	pop	r17
+     c84:	0f 91       	pop	r16
+     c86:	ff 90       	pop	r15
+     c88:	ef 90       	pop	r14
+     c8a:	df 90       	pop	r13
+     c8c:	cf 90       	pop	r12
+     c8e:	bf 90       	pop	r11
+     c90:	af 90       	pop	r10
+     c92:	9f 90       	pop	r9
+     c94:	8f 90       	pop	r8
+     c96:	7f 90       	pop	r7
+     c98:	6f 90       	pop	r6
+     c9a:	08 95       	ret
+
+00000c9c <cham128_keygen>:
+
+void cham128_keygen(uint8_t* rks, const uint8_t* mk)
+{
+     c9c:	4f 92       	push	r4
+     c9e:	5f 92       	push	r5
+     ca0:	6f 92       	push	r6
+     ca2:	7f 92       	push	r7
+     ca4:	8f 92       	push	r8
+     ca6:	9f 92       	push	r9
+     ca8:	af 92       	push	r10
+     caa:	bf 92       	push	r11
+     cac:	cf 92       	push	r12
+     cae:	df 92       	push	r13
+     cb0:	ef 92       	push	r14
+     cb2:	ff 92       	push	r15
+     cb4:	0f 93       	push	r16
+     cb6:	1f 93       	push	r17
+     cb8:	cf 93       	push	r28
+     cba:	df 93       	push	r29
+     cbc:	eb 01       	movw	r28, r22
+     cbe:	dc 01       	movw	r26, r24
+     cc0:	7c 01       	movw	r14, r24
+     cc2:	10 e1       	ldi	r17, 0x10	; 16
+     cc4:	e1 0e       	add	r14, r17
+     cc6:	f1 1c       	adc	r15, r1
+     cc8:	24 e0       	ldi	r18, 0x04	; 4
+     cca:	30 e0       	ldi	r19, 0x00	; 0
+     ccc:	6e 01       	movw	r12, r28
+	const uint32_t* key = (uint32_t*) mk;
+	uint32_t* rk = (uint32_t*) rks;
+
+	for (size_t i = 0; i < 4; ++i) {
+		rk[i] = key[i] ^ rol32(key[i], 1);
+     cce:	48 81       	ld	r20, Y
+     cd0:	59 81       	ldd	r21, Y+1	; 0x01
+     cd2:	6a 81       	ldd	r22, Y+2	; 0x02
+     cd4:	7b 81       	ldd	r23, Y+3	; 0x03
+     cd6:	4a 01       	movw	r8, r20
+     cd8:	5b 01       	movw	r10, r22
+     cda:	88 0c       	add	r8, r8
+     cdc:	99 1c       	adc	r9, r9
+     cde:	aa 1c       	adc	r10, r10
+     ce0:	bb 1c       	adc	r11, r11
+     ce2:	81 1c       	adc	r8, r1
+     ce4:	48 25       	eor	r20, r8
+     ce6:	59 25       	eor	r21, r9
+     ce8:	6a 25       	eor	r22, r10
+     cea:	7b 25       	eor	r23, r11
+     cec:	4d 93       	st	X+, r20
+     cee:	5d 93       	st	X+, r21
+     cf0:	6d 93       	st	X+, r22
+     cf2:	7c 93       	st	X, r23
+     cf4:	13 97       	sbiw	r26, 0x03	; 3
+		rk[(i+4)^(0x1)] = rk[i] ^ rol32(key[i], 11);
+     cf6:	f9 01       	movw	r30, r18
+     cf8:	11 e0       	ldi	r17, 0x01	; 1
+     cfa:	e1 27       	eor	r30, r17
+     cfc:	ee 0f       	add	r30, r30
+     cfe:	ff 1f       	adc	r31, r31
+     d00:	ee 0f       	add	r30, r30
+     d02:	ff 1f       	adc	r31, r31
+     d04:	e8 0f       	add	r30, r24
+     d06:	f9 1f       	adc	r31, r25
+     d08:	89 90       	ld	r8, Y+
+     d0a:	99 90       	ld	r9, Y+
+     d0c:	a9 90       	ld	r10, Y+
+     d0e:	b9 90       	ld	r11, Y+
+     d10:	24 01       	movw	r4, r8
+     d12:	35 01       	movw	r6, r10
+     d14:	0b e0       	ldi	r16, 0x0B	; 11
+     d16:	44 0c       	add	r4, r4
+     d18:	55 1c       	adc	r5, r5
+     d1a:	66 1c       	adc	r6, r6
+     d1c:	77 1c       	adc	r7, r7
+     d1e:	0a 95       	dec	r16
+     d20:	d1 f7       	brne	.-12     	; 0xd16 <cham128_keygen+0x7a>
+     d22:	15 e1       	ldi	r17, 0x15	; 21
+     d24:	b6 94       	lsr	r11
+     d26:	a7 94       	ror	r10
+     d28:	97 94       	ror	r9
+     d2a:	87 94       	ror	r8
+     d2c:	1a 95       	dec	r17
+     d2e:	d1 f7       	brne	.-12     	; 0xd24 <cham128_keygen+0x88>
+     d30:	84 28       	or	r8, r4
+     d32:	95 28       	or	r9, r5
+     d34:	a6 28       	or	r10, r6
+     d36:	b7 28       	or	r11, r7
+     d38:	84 26       	eor	r8, r20
+     d3a:	95 26       	eor	r9, r21
+     d3c:	a6 26       	eor	r10, r22
+     d3e:	b7 26       	eor	r11, r23
+     d40:	80 82       	st	Z, r8
+     d42:	91 82       	std	Z+1, r9	; 0x01
+     d44:	a2 82       	std	Z+2, r10	; 0x02
+     d46:	b3 82       	std	Z+3, r11	; 0x03
+		rk[i] ^= rol32(key[i], 8);
+     d48:	f6 01       	movw	r30, r12
+     d4a:	40 81       	ld	r20, Z
+     d4c:	51 81       	ldd	r21, Z+1	; 0x01
+     d4e:	62 81       	ldd	r22, Z+2	; 0x02
+     d50:	73 81       	ldd	r23, Z+3	; 0x03
+     d52:	f4 2f       	mov	r31, r20
+     d54:	47 2f       	mov	r20, r23
+     d56:	76 2f       	mov	r23, r22
+     d58:	65 2f       	mov	r22, r21
+     d5a:	5f 2f       	mov	r21, r31
+     d5c:	8d 90       	ld	r8, X+
+     d5e:	9d 90       	ld	r9, X+
+     d60:	ad 90       	ld	r10, X+
+     d62:	bc 90       	ld	r11, X
+     d64:	13 97       	sbiw	r26, 0x03	; 3
+     d66:	48 25       	eor	r20, r8
+     d68:	59 25       	eor	r21, r9
+     d6a:	6a 25       	eor	r22, r10
+     d6c:	7b 25       	eor	r23, r11
+     d6e:	4d 93       	st	X+, r20
+     d70:	5d 93       	st	X+, r21
+     d72:	6d 93       	st	X+, r22
+     d74:	7d 93       	st	X+, r23
+     d76:	2f 5f       	subi	r18, 0xFF	; 255
+     d78:	3f 4f       	sbci	r19, 0xFF	; 255
+void cham128_keygen(uint8_t* rks, const uint8_t* mk)
+{
+	const uint32_t* key = (uint32_t*) mk;
+	uint32_t* rk = (uint32_t*) rks;
+
+	for (size_t i = 0; i < 4; ++i) {
+     d7a:	ae 15       	cp	r26, r14
+     d7c:	bf 05       	cpc	r27, r15
+     d7e:	09 f0       	breq	.+2      	; 0xd82 <cham128_keygen+0xe6>
+     d80:	a5 cf       	rjmp	.-182    	; 0xccc <cham128_keygen+0x30>
+		rk[i] = key[i] ^ rol32(key[i], 1);
+		rk[(i+4)^(0x1)] = rk[i] ^ rol32(key[i], 11);
+		rk[i] ^= rol32(key[i], 8);
+	}
+}
+     d82:	df 91       	pop	r29
+     d84:	cf 91       	pop	r28
+     d86:	1f 91       	pop	r17
+     d88:	0f 91       	pop	r16
+     d8a:	ff 90       	pop	r15
+     d8c:	ef 90       	pop	r14
+     d8e:	df 90       	pop	r13
+     d90:	cf 90       	pop	r12
+     d92:	bf 90       	pop	r11
+     d94:	af 90       	pop	r10
+     d96:	9f 90       	pop	r9
+     d98:	8f 90       	pop	r8
+     d9a:	7f 90       	pop	r7
+     d9c:	6f 90       	pop	r6
+     d9e:	5f 90       	pop	r5
+     da0:	4f 90       	pop	r4
+     da2:	08 95       	ret
+
+00000da4 <cham128_ctr_encrypt>:
+
+void cham128_ctr_encrypt(uint8_t* dst, const uint8_t* src, const uint16_t src_len, const uint8_t* iv, const uint8_t* rks)
+{
+     da4:	6f 92       	push	r6
+     da6:	7f 92       	push	r7
+     da8:	8f 92       	push	r8
+     daa:	9f 92       	push	r9
+     dac:	af 92       	push	r10
+     dae:	bf 92       	push	r11
+     db0:	cf 92       	push	r12
+     db2:	df 92       	push	r13
+     db4:	ef 92       	push	r14
+     db6:	ff 92       	push	r15
+     db8:	0f 93       	push	r16
+     dba:	1f 93       	push	r17
+     dbc:	cf 93       	push	r28
+     dbe:	df 93       	push	r29
+     dc0:	cd b7       	in	r28, 0x3d	; 61
+     dc2:	de b7       	in	r29, 0x3e	; 62
+     dc4:	a0 97       	sbiw	r28, 0x20	; 32
+     dc6:	0f b6       	in	r0, 0x3f	; 63
+     dc8:	f8 94       	cli
+     dca:	de bf       	out	0x3e, r29	; 62
+     dcc:	0f be       	out	0x3f, r0	; 63
+     dce:	cd bf       	out	0x3d, r28	; 61
+     dd0:	f9 01       	movw	r30, r18
+	uint8_t temp_input[16];
+	uint8_t temp_output[16]={0};
+     dd2:	30 e1       	ldi	r19, 0x10	; 16
+     dd4:	de 01       	movw	r26, r28
+     dd6:	11 96       	adiw	r26, 0x01	; 1
+     dd8:	5d 01       	movw	r10, r26
+     dda:	23 2f       	mov	r18, r19
+     ddc:	1d 92       	st	X+, r1
+     dde:	2a 95       	dec	r18
+     de0:	e9 f7       	brne	.-6      	; 0xddc <cham128_ctr_encrypt+0x38>
+	memcpy(temp_input,iv,16);
+     de2:	de 01       	movw	r26, r28
+     de4:	51 96       	adiw	r26, 0x11	; 17
+     de6:	01 90       	ld	r0, Z+
+     de8:	0d 92       	st	X+, r0
+     dea:	3a 95       	dec	r19
+     dec:	e1 f7       	brne	.-8      	; 0xde6 <cham128_ctr_encrypt+0x42>
+	
+	uint16_t* temp_count=(uint16_t*)temp_input;
+	
+	for(int i=0;i<src_len/16;i++){
+     dee:	52 95       	swap	r21
+     df0:	42 95       	swap	r20
+     df2:	4f 70       	andi	r20, 0x0F	; 15
+     df4:	45 27       	eor	r20, r21
+     df6:	5f 70       	andi	r21, 0x0F	; 15
+     df8:	45 27       	eor	r20, r21
+     dfa:	41 15       	cp	r20, r1
+     dfc:	51 05       	cpc	r21, r1
+     dfe:	79 f1       	breq	.+94     	; 0xe5e <cham128_ctr_encrypt+0xba>
+     e00:	48 01       	movw	r8, r16
+     e02:	7b 01       	movw	r14, r22
+     e04:	6c 01       	movw	r12, r24
+     e06:	42 95       	swap	r20
+     e08:	52 95       	swap	r21
+     e0a:	50 7f       	andi	r21, 0xF0	; 240
+     e0c:	54 27       	eor	r21, r20
+     e0e:	40 7f       	andi	r20, 0xF0	; 240
+     e10:	54 27       	eor	r21, r20
+     e12:	3b 01       	movw	r6, r22
+     e14:	64 0e       	add	r6, r20
+     e16:	75 1e       	adc	r7, r21
+     e18:	8e 01       	movw	r16, r28
+     e1a:	0f 5e       	subi	r16, 0xEF	; 239
+     e1c:	1f 4f       	sbci	r17, 0xFF	; 255
+		cham128_encrypt(temp_output,temp_input,rks);  //iv를 encrypt
+     e1e:	a4 01       	movw	r20, r8
+     e20:	b8 01       	movw	r22, r16
+     e22:	c5 01       	movw	r24, r10
+     e24:	48 da       	rcall	.-2928   	; 0x2b6 <cham128_encrypt>
+     e26:	f5 01       	movw	r30, r10
+     e28:	96 01       	movw	r18, r12
+     e2a:	a7 01       	movw	r20, r14
+		
+		for(int j=0;j<16;j++){
+			dst[i*16+j] = temp_output[j]^src[i*16+j]; //encrypt 거친 iv와 pt xor
+     e2c:	91 91       	ld	r25, Z+
+     e2e:	da 01       	movw	r26, r20
+     e30:	8d 91       	ld	r24, X+
+     e32:	ad 01       	movw	r20, r26
+     e34:	89 27       	eor	r24, r25
+     e36:	d9 01       	movw	r26, r18
+     e38:	8d 93       	st	X+, r24
+     e3a:	9d 01       	movw	r18, r26
+	uint16_t* temp_count=(uint16_t*)temp_input;
+	
+	for(int i=0;i<src_len/16;i++){
+		cham128_encrypt(temp_output,temp_input,rks);  //iv를 encrypt
+		
+		for(int j=0;j<16;j++){
+     e3c:	0e 17       	cp	r16, r30
+     e3e:	1f 07       	cpc	r17, r31
+     e40:	a9 f7       	brne	.-22     	; 0xe2c <cham128_ctr_encrypt+0x88>
+			dst[i*16+j] = temp_output[j]^src[i*16+j]; //encrypt 거친 iv와 pt xor
+		}
+		
+		temp_count[0]++;  //counter 값 증가
+     e42:	89 89       	ldd	r24, Y+17	; 0x11
+     e44:	9a 89       	ldd	r25, Y+18	; 0x12
+     e46:	01 96       	adiw	r24, 0x01	; 1
+     e48:	9a 8b       	std	Y+18, r25	; 0x12
+     e4a:	89 8b       	std	Y+17, r24	; 0x11
+     e4c:	b0 e1       	ldi	r27, 0x10	; 16
+     e4e:	eb 0e       	add	r14, r27
+     e50:	f1 1c       	adc	r15, r1
+     e52:	20 e1       	ldi	r18, 0x10	; 16
+     e54:	c2 0e       	add	r12, r18
+     e56:	d1 1c       	adc	r13, r1
+	uint8_t temp_output[16]={0};
+	memcpy(temp_input,iv,16);
+	
+	uint16_t* temp_count=(uint16_t*)temp_input;
+	
+	for(int i=0;i<src_len/16;i++){
+     e58:	e6 14       	cp	r14, r6
+     e5a:	f7 04       	cpc	r15, r7
+     e5c:	01 f7       	brne	.-64     	; 0xe1e <cham128_ctr_encrypt+0x7a>
+			dst[i*16+j] = temp_output[j]^src[i*16+j]; //encrypt 거친 iv와 pt xor
+		}
+		
+		temp_count[0]++;  //counter 값 증가
+	}
+}
+     e5e:	a0 96       	adiw	r28, 0x20	; 32
+     e60:	0f b6       	in	r0, 0x3f	; 63
+     e62:	f8 94       	cli
+     e64:	de bf       	out	0x3e, r29	; 62
+     e66:	0f be       	out	0x3f, r0	; 63
+     e68:	cd bf       	out	0x3d, r28	; 61
+     e6a:	df 91       	pop	r29
+     e6c:	cf 91       	pop	r28
+     e6e:	1f 91       	pop	r17
+     e70:	0f 91       	pop	r16
+     e72:	ff 90       	pop	r15
+     e74:	ef 90       	pop	r14
+     e76:	df 90       	pop	r13
+     e78:	cf 90       	pop	r12
+     e7a:	bf 90       	pop	r11
+     e7c:	af 90       	pop	r10
+     e7e:	9f 90       	pop	r9
+     e80:	8f 90       	pop	r8
+     e82:	7f 90       	pop	r7
+     e84:	6f 90       	pop	r6
+     e86:	08 95       	ret
+
+00000e88 <cham256_keygen>:
+
+
+void cham256_keygen(uint8_t* rks, const uint8_t* mk)
+{
+     e88:	4f 92       	push	r4
+     e8a:	5f 92       	push	r5
+     e8c:	6f 92       	push	r6
+     e8e:	7f 92       	push	r7
+     e90:	8f 92       	push	r8
+     e92:	9f 92       	push	r9
+     e94:	af 92       	push	r10
+     e96:	bf 92       	push	r11
+     e98:	cf 92       	push	r12
+     e9a:	df 92       	push	r13
+     e9c:	ef 92       	push	r14
+     e9e:	ff 92       	push	r15
+     ea0:	0f 93       	push	r16
+     ea2:	1f 93       	push	r17
+     ea4:	cf 93       	push	r28
+     ea6:	df 93       	push	r29
+     ea8:	eb 01       	movw	r28, r22
+     eaa:	dc 01       	movw	r26, r24
+     eac:	7c 01       	movw	r14, r24
+     eae:	10 e2       	ldi	r17, 0x20	; 32
+     eb0:	e1 0e       	add	r14, r17
+     eb2:	f1 1c       	adc	r15, r1
+     eb4:	28 e0       	ldi	r18, 0x08	; 8
+     eb6:	30 e0       	ldi	r19, 0x00	; 0
+     eb8:	6e 01       	movw	r12, r28
+	const uint32_t* key = (uint32_t*) mk;
+	uint32_t* rk = (uint32_t*) rks;
+
+	for (size_t i = 0; i < 8; ++i) {
+		rk[i] = key[i] ^ rol32(key[i], 1);
+     eba:	48 81       	ld	r20, Y
+     ebc:	59 81       	ldd	r21, Y+1	; 0x01
+     ebe:	6a 81       	ldd	r22, Y+2	; 0x02
+     ec0:	7b 81       	ldd	r23, Y+3	; 0x03
+     ec2:	4a 01       	movw	r8, r20
+     ec4:	5b 01       	movw	r10, r22
+     ec6:	88 0c       	add	r8, r8
+     ec8:	99 1c       	adc	r9, r9
+     eca:	aa 1c       	adc	r10, r10
+     ecc:	bb 1c       	adc	r11, r11
+     ece:	81 1c       	adc	r8, r1
+     ed0:	48 25       	eor	r20, r8
+     ed2:	59 25       	eor	r21, r9
+     ed4:	6a 25       	eor	r22, r10
+     ed6:	7b 25       	eor	r23, r11
+     ed8:	4d 93       	st	X+, r20
+     eda:	5d 93       	st	X+, r21
+     edc:	6d 93       	st	X+, r22
+     ede:	7c 93       	st	X, r23
+     ee0:	13 97       	sbiw	r26, 0x03	; 3
+		rk[(i+8)^(0x1)] = rk[i] ^ rol32(key[i], 11);
+     ee2:	f9 01       	movw	r30, r18
+     ee4:	11 e0       	ldi	r17, 0x01	; 1
+     ee6:	e1 27       	eor	r30, r17
+     ee8:	ee 0f       	add	r30, r30
+     eea:	ff 1f       	adc	r31, r31
+     eec:	ee 0f       	add	r30, r30
+     eee:	ff 1f       	adc	r31, r31
+     ef0:	e8 0f       	add	r30, r24
+     ef2:	f9 1f       	adc	r31, r25
+     ef4:	89 90       	ld	r8, Y+
+     ef6:	99 90       	ld	r9, Y+
+     ef8:	a9 90       	ld	r10, Y+
+     efa:	b9 90       	ld	r11, Y+
+     efc:	24 01       	movw	r4, r8
+     efe:	35 01       	movw	r6, r10
+     f00:	0b e0       	ldi	r16, 0x0B	; 11
+     f02:	44 0c       	add	r4, r4
+     f04:	55 1c       	adc	r5, r5
+     f06:	66 1c       	adc	r6, r6
+     f08:	77 1c       	adc	r7, r7
+     f0a:	0a 95       	dec	r16
+     f0c:	d1 f7       	brne	.-12     	; 0xf02 <cham256_keygen+0x7a>
+     f0e:	15 e1       	ldi	r17, 0x15	; 21
+     f10:	b6 94       	lsr	r11
+     f12:	a7 94       	ror	r10
+     f14:	97 94       	ror	r9
+     f16:	87 94       	ror	r8
+     f18:	1a 95       	dec	r17
+     f1a:	d1 f7       	brne	.-12     	; 0xf10 <cham256_keygen+0x88>
+     f1c:	84 28       	or	r8, r4
+     f1e:	95 28       	or	r9, r5
+     f20:	a6 28       	or	r10, r6
+     f22:	b7 28       	or	r11, r7
+     f24:	84 26       	eor	r8, r20
+     f26:	95 26       	eor	r9, r21
+     f28:	a6 26       	eor	r10, r22
+     f2a:	b7 26       	eor	r11, r23
+     f2c:	80 82       	st	Z, r8
+     f2e:	91 82       	std	Z+1, r9	; 0x01
+     f30:	a2 82       	std	Z+2, r10	; 0x02
+     f32:	b3 82       	std	Z+3, r11	; 0x03
+		rk[i] ^= rol32(key[i], 8);
+     f34:	f6 01       	movw	r30, r12
+     f36:	40 81       	ld	r20, Z
+     f38:	51 81       	ldd	r21, Z+1	; 0x01
+     f3a:	62 81       	ldd	r22, Z+2	; 0x02
+     f3c:	73 81       	ldd	r23, Z+3	; 0x03
+     f3e:	f4 2f       	mov	r31, r20
+     f40:	47 2f       	mov	r20, r23
+     f42:	76 2f       	mov	r23, r22
+     f44:	65 2f       	mov	r22, r21
+     f46:	5f 2f       	mov	r21, r31
+     f48:	8d 90       	ld	r8, X+
+     f4a:	9d 90       	ld	r9, X+
+     f4c:	ad 90       	ld	r10, X+
+     f4e:	bc 90       	ld	r11, X
+     f50:	13 97       	sbiw	r26, 0x03	; 3
+     f52:	48 25       	eor	r20, r8
+     f54:	59 25       	eor	r21, r9
+     f56:	6a 25       	eor	r22, r10
+     f58:	7b 25       	eor	r23, r11
+     f5a:	4d 93       	st	X+, r20
+     f5c:	5d 93       	st	X+, r21
+     f5e:	6d 93       	st	X+, r22
+     f60:	7d 93       	st	X+, r23
+     f62:	2f 5f       	subi	r18, 0xFF	; 255
+     f64:	3f 4f       	sbci	r19, 0xFF	; 255
+void cham256_keygen(uint8_t* rks, const uint8_t* mk)
+{
+	const uint32_t* key = (uint32_t*) mk;
+	uint32_t* rk = (uint32_t*) rks;
+
+	for (size_t i = 0; i < 8; ++i) {
+     f66:	ae 15       	cp	r26, r14
+     f68:	bf 05       	cpc	r27, r15
+     f6a:	09 f0       	breq	.+2      	; 0xf6e <cham256_keygen+0xe6>
+     f6c:	a5 cf       	rjmp	.-182    	; 0xeb8 <cham256_keygen+0x30>
+		rk[i] = key[i] ^ rol32(key[i], 1);
+		rk[(i+8)^(0x1)] = rk[i] ^ rol32(key[i], 11);
+		rk[i] ^= rol32(key[i], 8);
+	}
+	
+}
+     f6e:	df 91       	pop	r29
+     f70:	cf 91       	pop	r28
+     f72:	1f 91       	pop	r17
+     f74:	0f 91       	pop	r16
+     f76:	ff 90       	pop	r15
+     f78:	ef 90       	pop	r14
+     f7a:	df 90       	pop	r13
+     f7c:	cf 90       	pop	r12
+     f7e:	bf 90       	pop	r11
+     f80:	af 90       	pop	r10
+     f82:	9f 90       	pop	r9
+     f84:	8f 90       	pop	r8
+     f86:	7f 90       	pop	r7
+     f88:	6f 90       	pop	r6
+     f8a:	5f 90       	pop	r5
+     f8c:	4f 90       	pop	r4
+     f8e:	08 95       	ret
+
+00000f90 <cham256_ctr_encrypt>:
+
+void cham256_ctr_encrypt(uint8_t* dst, const uint8_t* src, const uint16_t src_len, const uint8_t* iv, const uint8_t* rks)
+{
+     f90:	6f 92       	push	r6
+     f92:	7f 92       	push	r7
+     f94:	8f 92       	push	r8
+     f96:	9f 92       	push	r9
+     f98:	af 92       	push	r10
+     f9a:	bf 92       	push	r11
+     f9c:	cf 92       	push	r12
+     f9e:	df 92       	push	r13
+     fa0:	ef 92       	push	r14
+     fa2:	ff 92       	push	r15
+     fa4:	0f 93       	push	r16
+     fa6:	1f 93       	push	r17
+     fa8:	cf 93       	push	r28
+     faa:	df 93       	push	r29
+     fac:	cd b7       	in	r28, 0x3d	; 61
+     fae:	de b7       	in	r29, 0x3e	; 62
+     fb0:	a0 97       	sbiw	r28, 0x20	; 32
+     fb2:	0f b6       	in	r0, 0x3f	; 63
+     fb4:	f8 94       	cli
+     fb6:	de bf       	out	0x3e, r29	; 62
+     fb8:	0f be       	out	0x3f, r0	; 63
+     fba:	cd bf       	out	0x3d, r28	; 61
+     fbc:	f9 01       	movw	r30, r18
+	uint8_t temp_input[16];
+	uint8_t temp_output[16]={0};
+     fbe:	30 e1       	ldi	r19, 0x10	; 16
+     fc0:	de 01       	movw	r26, r28
+     fc2:	11 96       	adiw	r26, 0x01	; 1
+     fc4:	5d 01       	movw	r10, r26
+     fc6:	23 2f       	mov	r18, r19
+     fc8:	1d 92       	st	X+, r1
+     fca:	2a 95       	dec	r18
+     fcc:	e9 f7       	brne	.-6      	; 0xfc8 <cham256_ctr_encrypt+0x38>
+	memcpy(temp_input,iv,16);
+     fce:	de 01       	movw	r26, r28
+     fd0:	51 96       	adiw	r26, 0x11	; 17
+     fd2:	01 90       	ld	r0, Z+
+     fd4:	0d 92       	st	X+, r0
+     fd6:	3a 95       	dec	r19
+     fd8:	e1 f7       	brne	.-8      	; 0xfd2 <cham256_ctr_encrypt+0x42>
+	
+	uint16_t* temp_count=(uint16_t*)temp_input;
+	
+	for(int i=0;i<src_len/16;i++){
+     fda:	52 95       	swap	r21
+     fdc:	42 95       	swap	r20
+     fde:	4f 70       	andi	r20, 0x0F	; 15
+     fe0:	45 27       	eor	r20, r21
+     fe2:	5f 70       	andi	r21, 0x0F	; 15
+     fe4:	45 27       	eor	r20, r21
+     fe6:	41 15       	cp	r20, r1
+     fe8:	51 05       	cpc	r21, r1
+     fea:	79 f1       	breq	.+94     	; 0x104a <__DATA_REGION_LENGTH__+0x4a>
+     fec:	48 01       	movw	r8, r16
+     fee:	7b 01       	movw	r14, r22
+     ff0:	6c 01       	movw	r12, r24
+     ff2:	42 95       	swap	r20
+     ff4:	52 95       	swap	r21
+     ff6:	50 7f       	andi	r21, 0xF0	; 240
+     ff8:	54 27       	eor	r21, r20
+     ffa:	40 7f       	andi	r20, 0xF0	; 240
+     ffc:	54 27       	eor	r21, r20
+     ffe:	3b 01       	movw	r6, r22
+    1000:	64 0e       	add	r6, r20
+    1002:	75 1e       	adc	r7, r21
+    1004:	8e 01       	movw	r16, r28
+    1006:	0f 5e       	subi	r16, 0xEF	; 239
+    1008:	1f 4f       	sbci	r17, 0xFF	; 255
+		cham256_encrypt(temp_output,temp_input,rks);   //iv를 encrypt
+    100a:	a4 01       	movw	r20, r8
+    100c:	b8 01       	movw	r22, r16
+    100e:	c5 01       	movw	r24, r10
+    1010:	48 db       	rcall	.-2416   	; 0x6a2 <cham256_encrypt>
+    1012:	f5 01       	movw	r30, r10
+    1014:	96 01       	movw	r18, r12
+    1016:	a7 01       	movw	r20, r14
+		
+		for(int j=0;j<16;j++){
+			dst[i*16+j] = temp_output[j]^src[i*16+j];   //encrypt 거친 iv와 pt xor
+    1018:	91 91       	ld	r25, Z+
+    101a:	da 01       	movw	r26, r20
+    101c:	8d 91       	ld	r24, X+
+    101e:	ad 01       	movw	r20, r26
+    1020:	89 27       	eor	r24, r25
+    1022:	d9 01       	movw	r26, r18
+    1024:	8d 93       	st	X+, r24
+    1026:	9d 01       	movw	r18, r26
+	uint16_t* temp_count=(uint16_t*)temp_input;
+	
+	for(int i=0;i<src_len/16;i++){
+		cham256_encrypt(temp_output,temp_input,rks);   //iv를 encrypt
+		
+		for(int j=0;j<16;j++){
+    1028:	0e 17       	cp	r16, r30
+    102a:	1f 07       	cpc	r17, r31
+    102c:	a9 f7       	brne	.-22     	; 0x1018 <__DATA_REGION_LENGTH__+0x18>
+			dst[i*16+j] = temp_output[j]^src[i*16+j];   //encrypt 거친 iv와 pt xor
+		}
+		
+		temp_count[0]++;  //counter 값 증가
+    102e:	89 89       	ldd	r24, Y+17	; 0x11
+    1030:	9a 89       	ldd	r25, Y+18	; 0x12
+    1032:	01 96       	adiw	r24, 0x01	; 1
+    1034:	9a 8b       	std	Y+18, r25	; 0x12
+    1036:	89 8b       	std	Y+17, r24	; 0x11
+    1038:	b0 e1       	ldi	r27, 0x10	; 16
+    103a:	eb 0e       	add	r14, r27
+    103c:	f1 1c       	adc	r15, r1
+    103e:	20 e1       	ldi	r18, 0x10	; 16
+    1040:	c2 0e       	add	r12, r18
+    1042:	d1 1c       	adc	r13, r1
+	uint8_t temp_output[16]={0};
+	memcpy(temp_input,iv,16);
+	
+	uint16_t* temp_count=(uint16_t*)temp_input;
+	
+	for(int i=0;i<src_len/16;i++){
+    1044:	e6 14       	cp	r14, r6
+    1046:	f7 04       	cpc	r15, r7
+    1048:	01 f7       	brne	.-64     	; 0x100a <__DATA_REGION_LENGTH__+0xa>
+			dst[i*16+j] = temp_output[j]^src[i*16+j];   //encrypt 거친 iv와 pt xor
+		}
+		
+		temp_count[0]++;  //counter 값 증가
+	}
+}
+    104a:	a0 96       	adiw	r28, 0x20	; 32
+    104c:	0f b6       	in	r0, 0x3f	; 63
+    104e:	f8 94       	cli
+    1050:	de bf       	out	0x3e, r29	; 62
+    1052:	0f be       	out	0x3f, r0	; 63
+    1054:	cd bf       	out	0x3d, r28	; 61
+    1056:	df 91       	pop	r29
+    1058:	cf 91       	pop	r28
+    105a:	1f 91       	pop	r17
+    105c:	0f 91       	pop	r16
+    105e:	ff 90       	pop	r15
+    1060:	ef 90       	pop	r14
+    1062:	df 90       	pop	r13
+    1064:	cf 90       	pop	r12
+    1066:	bf 90       	pop	r11
+    1068:	af 90       	pop	r10
+    106a:	9f 90       	pop	r9
+    106c:	8f 90       	pop	r8
+    106e:	7f 90       	pop	r7
+    1070:	6f 90       	pop	r6
+    1072:	08 95       	ret
+
+00001074 <test_cham64>:
+extern void cham256_decrypt(uint8_t*dst, const uint8_t* src, const uint8_t* rks);
+
+uint8_t rks[] __attribute__ ((section(".RKSection")))  ={0};
+	
+void test_cham64()
+{
+    1074:	af 92       	push	r10
+    1076:	bf 92       	push	r11
+    1078:	cf 92       	push	r12
+    107a:	df 92       	push	r13
+    107c:	ef 92       	push	r14
+    107e:	ff 92       	push	r15
+    1080:	0f 93       	push	r16
+    1082:	1f 93       	push	r17
+    1084:	cf 93       	push	r28
+    1086:	df 93       	push	r29
+    1088:	cd b7       	in	r28, 0x3d	; 61
+    108a:	de b7       	in	r29, 0x3e	; 62
+    108c:	e8 97       	sbiw	r28, 0x38	; 56
+    108e:	0f b6       	in	r0, 0x3f	; 63
+    1090:	f8 94       	cli
+    1092:	de bf       	out	0x3e, r29	; 62
+    1094:	0f be       	out	0x3f, r0	; 63
+    1096:	cd bf       	out	0x3d, r28	; 61
+	uint8_t mk[] ={ 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f, };
+    1098:	80 e1       	ldi	r24, 0x10	; 16
+    109a:	e0 e0       	ldi	r30, 0x00	; 0
+    109c:	f1 e0       	ldi	r31, 0x01	; 1
+    109e:	de 01       	movw	r26, r28
+    10a0:	11 96       	adiw	r26, 0x01	; 1
+    10a2:	01 90       	ld	r0, Z+
+    10a4:	0d 92       	st	X+, r0
+    10a6:	8a 95       	dec	r24
+    10a8:	e1 f7       	brne	.-8      	; 0x10a2 <test_cham64+0x2e>
+	
+	uint8_t pt[] ={ 0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, };
+    10aa:	88 e0       	ldi	r24, 0x08	; 8
+    10ac:	e0 e1       	ldi	r30, 0x10	; 16
+    10ae:	f1 e0       	ldi	r31, 0x01	; 1
+    10b0:	de 01       	movw	r26, r28
+    10b2:	d1 96       	adiw	r26, 0x31	; 49
+    10b4:	01 90       	ld	r0, Z+
+    10b6:	0d 92       	st	X+, r0
+    10b8:	8a 95       	dec	r24
+    10ba:	e1 f7       	brne	.-8      	; 0x10b4 <test_cham64+0x40>
+	
+	uint8_t ct[8] = {0x79, 0x69, 0x04, 0x12, 0x3f, 0x12, 0xa9, 0xe5};
+    10bc:	88 e0       	ldi	r24, 0x08	; 8
+    10be:	e8 e1       	ldi	r30, 0x18	; 24
+    10c0:	f1 e0       	ldi	r31, 0x01	; 1
+    10c2:	de 01       	movw	r26, r28
+    10c4:	99 96       	adiw	r26, 0x29	; 41
+    10c6:	01 90       	ld	r0, Z+
+    10c8:	0d 92       	st	X+, r0
+    10ca:	8a 95       	dec	r24
+    10cc:	e1 f7       	brne	.-8      	; 0x10c6 <test_cham64+0x52>
+		
+	uint8_t IV[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+    10ce:	88 e0       	ldi	r24, 0x08	; 8
+    10d0:	5e 01       	movw	r10, r28
+    10d2:	91 e2       	ldi	r25, 0x21	; 33
+    10d4:	a9 0e       	add	r10, r25
+    10d6:	b1 1c       	adc	r11, r1
+    10d8:	f5 01       	movw	r30, r10
+    10da:	98 2f       	mov	r25, r24
+    10dc:	11 92       	st	Z+, r1
+    10de:	9a 95       	dec	r25
+    10e0:	e9 f7       	brne	.-6      	; 0x10dc <test_cham64+0x68>
+	
+	uint16_t pt_len =sizeof(pt);  //8, �迭 �� 
+	
+
+	uint8_t encrypted[8] ={0,};   // ī���͸�� �� �� ����.
+    10e2:	7e 01       	movw	r14, r28
+    10e4:	e9 e1       	ldi	r30, 0x19	; 25
+    10e6:	ee 0e       	add	r14, r30
+    10e8:	f1 1c       	adc	r15, r1
+    10ea:	f7 01       	movw	r30, r14
+    10ec:	98 2f       	mov	r25, r24
+    10ee:	11 92       	st	Z+, r1
+    10f0:	9a 95       	dec	r25
+    10f2:	e9 f7       	brne	.-6      	; 0x10ee <test_cham64+0x7a>
+	uint8_t decrypted[8] ={0,};
+    10f4:	6e 01       	movw	r12, r28
+    10f6:	e1 e1       	ldi	r30, 0x11	; 17
+    10f8:	ce 0e       	add	r12, r30
+    10fa:	d1 1c       	adc	r13, r1
+    10fc:	f6 01       	movw	r30, r12
+    10fe:	11 92       	st	Z+, r1
+    1100:	8a 95       	dec	r24
+    1102:	e9 f7       	brne	.-6      	; 0x10fe <test_cham64+0x8a>
+		
+	cham64_keygen(rks,mk);    // key schedule
+    1104:	be 01       	movw	r22, r28
+    1106:	6f 5f       	subi	r22, 0xFF	; 255
+    1108:	7f 4f       	sbci	r23, 0xFF	; 255
+    110a:	80 e0       	ldi	r24, 0x00	; 0
+    110c:	94 e0       	ldi	r25, 0x04	; 4
+    110e:	f5 dc       	rcall	.-1558   	; 0xafa <cham64_keygen>
+	cham64_encrypt(encrypted,pt,rks);// 1-block encrypt/decrypt
+    1110:	40 e0       	ldi	r20, 0x00	; 0
+    1112:	54 e0       	ldi	r21, 0x04	; 4
+    1114:	be 01       	movw	r22, r28
+    1116:	6f 5c       	subi	r22, 0xCF	; 207
+    1118:	7f 4f       	sbci	r23, 0xFF	; 255
+    111a:	c7 01       	movw	r24, r14
+    111c:	69 dc       	rcall	.-1838   	; 0x9f0 <cham64_encrypt>
+	cham64_decrypt(decrypted,ct,rks);
+    111e:	40 e0       	ldi	r20, 0x00	; 0
+    1120:	54 e0       	ldi	r21, 0x04	; 4
+    1122:	be 01       	movw	r22, r28
+    1124:	67 5d       	subi	r22, 0xD7	; 215
+    1126:	7f 4f       	sbci	r23, 0xFF	; 255
+    1128:	c6 01       	movw	r24, r12
+    112a:	d5 db       	rcall	.-2134   	; 0x8d6 <cham64_decrypt>
+	cham64_ctr_encrypt(encrypted,pt,pt_len,IV,rks);// CTR encrypt/decrypt
+    112c:	00 e0       	ldi	r16, 0x00	; 0
+    112e:	14 e0       	ldi	r17, 0x04	; 4
+    1130:	95 01       	movw	r18, r10
+    1132:	48 e0       	ldi	r20, 0x08	; 8
+    1134:	50 e0       	ldi	r21, 0x00	; 0
+    1136:	be 01       	movw	r22, r28
+    1138:	6f 5c       	subi	r22, 0xCF	; 207
+    113a:	7f 4f       	sbci	r23, 0xFF	; 255
+    113c:	c7 01       	movw	r24, r14
+    113e:	3c dd       	rcall	.-1416   	; 0xbb8 <cham64_ctr_encrypt>
+	cham64_ctr_encrypt(decrypted,encrypted,pt_len,IV,rks);
+    1140:	95 01       	movw	r18, r10
+    1142:	48 e0       	ldi	r20, 0x08	; 8
+    1144:	50 e0       	ldi	r21, 0x00	; 0
+    1146:	b7 01       	movw	r22, r14
+    1148:	c6 01       	movw	r24, r12
+    114a:	36 dd       	rcall	.-1428   	; 0xbb8 <cham64_ctr_encrypt>
+}
+    114c:	e8 96       	adiw	r28, 0x38	; 56
+    114e:	0f b6       	in	r0, 0x3f	; 63
+    1150:	f8 94       	cli
+    1152:	de bf       	out	0x3e, r29	; 62
+    1154:	0f be       	out	0x3f, r0	; 63
+    1156:	cd bf       	out	0x3d, r28	; 61
+    1158:	df 91       	pop	r29
+    115a:	cf 91       	pop	r28
+    115c:	1f 91       	pop	r17
+    115e:	0f 91       	pop	r16
+    1160:	ff 90       	pop	r15
+    1162:	ef 90       	pop	r14
+    1164:	df 90       	pop	r13
+    1166:	cf 90       	pop	r12
+    1168:	bf 90       	pop	r11
+    116a:	af 90       	pop	r10
+    116c:	08 95       	ret
+
+0000116e <test_cham128>:
+
+void test_cham128()
+{
+    116e:	af 92       	push	r10
+    1170:	bf 92       	push	r11
+    1172:	cf 92       	push	r12
+    1174:	df 92       	push	r13
+    1176:	ef 92       	push	r14
+    1178:	ff 92       	push	r15
+    117a:	0f 93       	push	r16
+    117c:	1f 93       	push	r17
+    117e:	cf 93       	push	r28
+    1180:	df 93       	push	r29
+    1182:	cd b7       	in	r28, 0x3d	; 61
+    1184:	de b7       	in	r29, 0x3e	; 62
+    1186:	c0 56       	subi	r28, 0x60	; 96
+    1188:	d1 09       	sbc	r29, r1
+    118a:	0f b6       	in	r0, 0x3f	; 63
+    118c:	f8 94       	cli
+    118e:	de bf       	out	0x3e, r29	; 62
+    1190:	0f be       	out	0x3f, r0	; 63
+    1192:	cd bf       	out	0x3d, r28	; 61
+	uint8_t mk[] ={ 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f, };
+    1194:	80 e1       	ldi	r24, 0x10	; 16
+    1196:	e0 e0       	ldi	r30, 0x00	; 0
+    1198:	f1 e0       	ldi	r31, 0x01	; 1
+    119a:	de 01       	movw	r26, r28
+    119c:	af 5a       	subi	r26, 0xAF	; 175
+    119e:	bf 4f       	sbci	r27, 0xFF	; 255
+    11a0:	01 90       	ld	r0, Z+
+    11a2:	0d 92       	st	X+, r0
+    11a4:	8a 95       	dec	r24
+    11a6:	e1 f7       	brne	.-8      	; 0x11a0 <test_cham128+0x32>
+	
+	uint8_t pt[] ={ 0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xaa, 0xbb, 0xcc, 0xdd, 0xee, 0xff, };
+    11a8:	80 e1       	ldi	r24, 0x10	; 16
+    11aa:	e0 e2       	ldi	r30, 0x20	; 32
+    11ac:	f1 e0       	ldi	r31, 0x01	; 1
+    11ae:	de 01       	movw	r26, r28
+    11b0:	af 5b       	subi	r26, 0xBF	; 191
+    11b2:	bf 4f       	sbci	r27, 0xFF	; 255
+    11b4:	01 90       	ld	r0, Z+
+    11b6:	0d 92       	st	X+, r0
+    11b8:	8a 95       	dec	r24
+    11ba:	e1 f7       	brne	.-8      	; 0x11b4 <test_cham128+0x46>
+		
+	uint8_t ct[16] = {0}; //{0xee, 0x19, 0x54, 0xd0, 0x4c, 0x8f, 0x11, 0x9f, 0x69, 0x64, 0xe3, 0x99, 0xc1, 0x5e, 0x88, 0x1c, };
+    11bc:	80 e1       	ldi	r24, 0x10	; 16
+    11be:	8e 01       	movw	r16, r28
+    11c0:	0f 5c       	subi	r16, 0xCF	; 207
+    11c2:	1f 4f       	sbci	r17, 0xFF	; 255
+    11c4:	f8 01       	movw	r30, r16
+    11c6:	28 2f       	mov	r18, r24
+    11c8:	11 92       	st	Z+, r1
+    11ca:	2a 95       	dec	r18
+    11cc:	e9 f7       	brne	.-6      	; 0x11c8 <test_cham128+0x5a>
+	
+	uint8_t encrypted[16] ={0,};
+    11ce:	7e 01       	movw	r14, r28
+    11d0:	31 e2       	ldi	r19, 0x21	; 33
+    11d2:	e3 0e       	add	r14, r19
+    11d4:	f1 1c       	adc	r15, r1
+    11d6:	f7 01       	movw	r30, r14
+    11d8:	28 2f       	mov	r18, r24
+    11da:	11 92       	st	Z+, r1
+    11dc:	2a 95       	dec	r18
+    11de:	e9 f7       	brne	.-6      	; 0x11da <test_cham128+0x6c>
+	uint8_t decrypted[16] ={0,};
+    11e0:	5e 01       	movw	r10, r28
+    11e2:	31 e1       	ldi	r19, 0x11	; 17
+    11e4:	a3 0e       	add	r10, r19
+    11e6:	b1 1c       	adc	r11, r1
+    11e8:	f5 01       	movw	r30, r10
+    11ea:	28 2f       	mov	r18, r24
+    11ec:	11 92       	st	Z+, r1
+    11ee:	2a 95       	dec	r18
+    11f0:	e9 f7       	brne	.-6      	; 0x11ec <test_cham128+0x7e>
+		
+	uint8_t IV[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+    11f2:	fe 01       	movw	r30, r28
+    11f4:	31 96       	adiw	r30, 0x01	; 1
+    11f6:	6f 01       	movw	r12, r30
+    11f8:	11 92       	st	Z+, r1
+    11fa:	8a 95       	dec	r24
+    11fc:	e9 f7       	brne	.-6      	; 0x11f8 <test_cham128+0x8a>
+		
+	uint16_t pt_len =sizeof(pt);
+		
+	cham128_keygen(rks,mk);// key schedule
+    11fe:	be 01       	movw	r22, r28
+    1200:	6f 5a       	subi	r22, 0xAF	; 175
+    1202:	7f 4f       	sbci	r23, 0xFF	; 255
+    1204:	80 e0       	ldi	r24, 0x00	; 0
+    1206:	94 e0       	ldi	r25, 0x04	; 4
+    1208:	49 dd       	rcall	.-1390   	; 0xc9c <cham128_keygen>
+	cham128_encrypt(ct,pt,rks); // 1-block encrypt/decrypt
+    120a:	40 e0       	ldi	r20, 0x00	; 0
+    120c:	54 e0       	ldi	r21, 0x04	; 4
+    120e:	be 01       	movw	r22, r28
+    1210:	6f 5b       	subi	r22, 0xBF	; 191
+    1212:	7f 4f       	sbci	r23, 0xFF	; 255
+    1214:	c8 01       	movw	r24, r16
+    1216:	4f d8       	rcall	.-3938   	; 0x2b6 <cham128_encrypt>
+	cham128_decrypt(pt,ct,rks);
+    1218:	40 e0       	ldi	r20, 0x00	; 0
+    121a:	54 e0       	ldi	r21, 0x04	; 4
+    121c:	b8 01       	movw	r22, r16
+    121e:	ce 01       	movw	r24, r28
+    1220:	8f 5b       	subi	r24, 0xBF	; 191
+    1222:	9f 4f       	sbci	r25, 0xFF	; 255
+    1224:	0e 94 5e 00 	call	0xbc	; 0xbc <cham128_decrypt>
+	cham128_ctr_encrypt(encrypted,pt,pt_len,IV,rks);// CTR encrypt/decrypt
+    1228:	00 e0       	ldi	r16, 0x00	; 0
+    122a:	14 e0       	ldi	r17, 0x04	; 4
+    122c:	96 01       	movw	r18, r12
+    122e:	40 e1       	ldi	r20, 0x10	; 16
+    1230:	50 e0       	ldi	r21, 0x00	; 0
+    1232:	be 01       	movw	r22, r28
+    1234:	6f 5b       	subi	r22, 0xBF	; 191
+    1236:	7f 4f       	sbci	r23, 0xFF	; 255
+    1238:	c7 01       	movw	r24, r14
+    123a:	b4 dd       	rcall	.-1176   	; 0xda4 <cham128_ctr_encrypt>
+	cham128_ctr_encrypt(decrypted,encrypted,pt_len,IV,rks);
+    123c:	96 01       	movw	r18, r12
+    123e:	40 e1       	ldi	r20, 0x10	; 16
+    1240:	50 e0       	ldi	r21, 0x00	; 0
+    1242:	b7 01       	movw	r22, r14
+    1244:	c5 01       	movw	r24, r10
+    1246:	ae dd       	rcall	.-1188   	; 0xda4 <cham128_ctr_encrypt>
+}
+    1248:	c0 5a       	subi	r28, 0xA0	; 160
+    124a:	df 4f       	sbci	r29, 0xFF	; 255
+    124c:	0f b6       	in	r0, 0x3f	; 63
+    124e:	f8 94       	cli
+    1250:	de bf       	out	0x3e, r29	; 62
+    1252:	0f be       	out	0x3f, r0	; 63
+    1254:	cd bf       	out	0x3d, r28	; 61
+    1256:	df 91       	pop	r29
+    1258:	cf 91       	pop	r28
+    125a:	1f 91       	pop	r17
+    125c:	0f 91       	pop	r16
+    125e:	ff 90       	pop	r15
+    1260:	ef 90       	pop	r14
+    1262:	df 90       	pop	r13
+    1264:	cf 90       	pop	r12
+    1266:	bf 90       	pop	r11
+    1268:	af 90       	pop	r10
+    126a:	08 95       	ret
+
+0000126c <test_cham256>:
+
+void test_cham256()
+{
+    126c:	af 92       	push	r10
+    126e:	bf 92       	push	r11
+    1270:	cf 92       	push	r12
+    1272:	df 92       	push	r13
+    1274:	ef 92       	push	r14
+    1276:	ff 92       	push	r15
+    1278:	0f 93       	push	r16
+    127a:	1f 93       	push	r17
+    127c:	cf 93       	push	r28
+    127e:	df 93       	push	r29
+    1280:	cd b7       	in	r28, 0x3d	; 61
+    1282:	de b7       	in	r29, 0x3e	; 62
+    1284:	c0 57       	subi	r28, 0x70	; 112
+    1286:	d1 09       	sbc	r29, r1
+    1288:	0f b6       	in	r0, 0x3f	; 63
+    128a:	f8 94       	cli
+    128c:	de bf       	out	0x3e, r29	; 62
+    128e:	0f be       	out	0x3f, r0	; 63
+    1290:	cd bf       	out	0x3d, r28	; 61
+	
+	uint8_t mk[] = {
+    1292:	80 e2       	ldi	r24, 0x20	; 32
+    1294:	e0 e3       	ldi	r30, 0x30	; 48
+    1296:	f1 e0       	ldi	r31, 0x01	; 1
+    1298:	de 01       	movw	r26, r28
+    129a:	11 96       	adiw	r26, 0x01	; 1
+    129c:	01 90       	ld	r0, Z+
+    129e:	0d 92       	st	X+, r0
+    12a0:	8a 95       	dec	r24
+    12a2:	e1 f7       	brne	.-8      	; 0x129c <test_cham256+0x30>
+		0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09, 0x0a, 0x0b, 0x0c, 0x0d, 0x0e, 0x0f,
+		0xf0, 0xf1, 0xf2, 0xf3, 0xf4, 0xF5, 0xf6, 0xf7, 0xf8, 0xf9, 0xfa, 0xfb, 0xfc, 0xfd, 0xfe, 0xff,
+	};
+
+    uint8_t pt[] = {
+    12a4:	80 e1       	ldi	r24, 0x10	; 16
+    12a6:	e0 e2       	ldi	r30, 0x20	; 32
+    12a8:	f1 e0       	ldi	r31, 0x01	; 1
+    12aa:	de 01       	movw	r26, r28
+    12ac:	af 59       	subi	r26, 0x9F	; 159
+    12ae:	bf 4f       	sbci	r27, 0xFF	; 255
+    12b0:	01 90       	ld	r0, Z+
+    12b2:	0d 92       	st	X+, r0
+    12b4:	8a 95       	dec	r24
+    12b6:	e1 f7       	brne	.-8      	; 0x12b0 <test_cham256+0x44>
+		0x00, 0x11, 0x22, 0x33, 0x44, 0x55, 0x66, 0x77, 0x88, 0x99, 0xaa, 0xbb, 0xcc, 0xdd, 0xee, 0xff,
+	};
+
+	uint8_t ct[] = {
+    12b8:	80 e1       	ldi	r24, 0x10	; 16
+    12ba:	e0 e5       	ldi	r30, 0x50	; 80
+    12bc:	f1 e0       	ldi	r31, 0x01	; 1
+    12be:	de 01       	movw	r26, r28
+    12c0:	af 5a       	subi	r26, 0xAF	; 175
+    12c2:	bf 4f       	sbci	r27, 0xFF	; 255
+    12c4:	01 90       	ld	r0, Z+
+    12c6:	0d 92       	st	X+, r0
+    12c8:	8a 95       	dec	r24
+    12ca:	e1 f7       	brne	.-8      	; 0x12c4 <test_cham256+0x58>
+		0xdc, 0x77, 0x73, 0x02, 0x51, 0x56, 0x0b, 0x12, 0x95, 0x9b, 0x83, 0x8f, 0x75, 0xc0, 0x5e, 0x5e
+	};
+	
+	uint8_t encrypted[16] ={0,};
+    12cc:	80 e1       	ldi	r24, 0x10	; 16
+    12ce:	7e 01       	movw	r14, r28
+    12d0:	91 e4       	ldi	r25, 0x41	; 65
+    12d2:	e9 0e       	add	r14, r25
+    12d4:	f1 1c       	adc	r15, r1
+    12d6:	f7 01       	movw	r30, r14
+    12d8:	98 2f       	mov	r25, r24
+    12da:	11 92       	st	Z+, r1
+    12dc:	9a 95       	dec	r25
+    12de:	e9 f7       	brne	.-6      	; 0x12da <test_cham256+0x6e>
+	uint8_t decrypted[16] ={0,};
+    12e0:	6e 01       	movw	r12, r28
+    12e2:	e1 e3       	ldi	r30, 0x31	; 49
+    12e4:	ce 0e       	add	r12, r30
+    12e6:	d1 1c       	adc	r13, r1
+    12e8:	f6 01       	movw	r30, r12
+    12ea:	98 2f       	mov	r25, r24
+    12ec:	11 92       	st	Z+, r1
+    12ee:	9a 95       	dec	r25
+    12f0:	e9 f7       	brne	.-6      	; 0x12ec <test_cham256+0x80>
+		
+	uint8_t IV[] = {0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00,0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
+    12f2:	5e 01       	movw	r10, r28
+    12f4:	e1 e2       	ldi	r30, 0x21	; 33
+    12f6:	ae 0e       	add	r10, r30
+    12f8:	b1 1c       	adc	r11, r1
+    12fa:	f5 01       	movw	r30, r10
+    12fc:	11 92       	st	Z+, r1
+    12fe:	8a 95       	dec	r24
+    1300:	e9 f7       	brne	.-6      	; 0x12fc <test_cham256+0x90>
+	
+	uint16_t pt_len =sizeof(pt);		
+		
+		
+	cham256_keygen(rks,mk);// key schedule
+    1302:	be 01       	movw	r22, r28
+    1304:	6f 5f       	subi	r22, 0xFF	; 255
+    1306:	7f 4f       	sbci	r23, 0xFF	; 255
+    1308:	80 e0       	ldi	r24, 0x00	; 0
+    130a:	94 e0       	ldi	r25, 0x04	; 4
+    130c:	bd dd       	rcall	.-1158   	; 0xe88 <cham256_keygen>
+	cham256_encrypt(encrypted,pt,rks);// 1-block encrypt/decrypt
+    130e:	40 e0       	ldi	r20, 0x00	; 0
+    1310:	54 e0       	ldi	r21, 0x04	; 4
+    1312:	be 01       	movw	r22, r28
+    1314:	6f 59       	subi	r22, 0x9F	; 159
+    1316:	7f 4f       	sbci	r23, 0xFF	; 255
+    1318:	c7 01       	movw	r24, r14
+    131a:	c3 d9       	rcall	.-3194   	; 0x6a2 <cham256_encrypt>
+  	cham256_decrypt(decrypted,ct,rks);
+    131c:	40 e0       	ldi	r20, 0x00	; 0
+    131e:	54 e0       	ldi	r21, 0x04	; 4
+    1320:	be 01       	movw	r22, r28
+    1322:	6f 5a       	subi	r22, 0xAF	; 175
+    1324:	7f 4f       	sbci	r23, 0xFF	; 255
+    1326:	c6 01       	movw	r24, r12
+    1328:	bd d8       	rcall	.-3718   	; 0x4a4 <cham256_decrypt>
+	cham256_ctr_encrypt(encrypted,pt,pt_len,IV,rks);// CTR encrypt/decrypt
+    132a:	00 e0       	ldi	r16, 0x00	; 0
+    132c:	14 e0       	ldi	r17, 0x04	; 4
+    132e:	95 01       	movw	r18, r10
+    1330:	40 e1       	ldi	r20, 0x10	; 16
+    1332:	50 e0       	ldi	r21, 0x00	; 0
+    1334:	be 01       	movw	r22, r28
+    1336:	6f 59       	subi	r22, 0x9F	; 159
+    1338:	7f 4f       	sbci	r23, 0xFF	; 255
+    133a:	c7 01       	movw	r24, r14
+    133c:	29 de       	rcall	.-942    	; 0xf90 <cham256_ctr_encrypt>
+	cham256_ctr_encrypt(decrypted,encrypted,pt_len,IV,rks);
+    133e:	95 01       	movw	r18, r10
+    1340:	40 e1       	ldi	r20, 0x10	; 16
+    1342:	50 e0       	ldi	r21, 0x00	; 0
+    1344:	b7 01       	movw	r22, r14
+    1346:	c6 01       	movw	r24, r12
+    1348:	23 de       	rcall	.-954    	; 0xf90 <cham256_ctr_encrypt>
+}
+    134a:	c0 59       	subi	r28, 0x90	; 144
+    134c:	df 4f       	sbci	r29, 0xFF	; 255
+    134e:	0f b6       	in	r0, 0x3f	; 63
+    1350:	f8 94       	cli
+    1352:	de bf       	out	0x3e, r29	; 62
+    1354:	0f be       	out	0x3f, r0	; 63
+    1356:	cd bf       	out	0x3d, r28	; 61
+    1358:	df 91       	pop	r29
+    135a:	cf 91       	pop	r28
+    135c:	1f 91       	pop	r17
+    135e:	0f 91       	pop	r16
+    1360:	ff 90       	pop	r15
+    1362:	ef 90       	pop	r14
+    1364:	df 90       	pop	r13
+    1366:	cf 90       	pop	r12
+    1368:	bf 90       	pop	r11
+    136a:	af 90       	pop	r10
+    136c:	08 95       	ret
+
+0000136e <main>:
+
+int main(void)
+{
+	// variables...
+	
+	test_cham64();
+    136e:	82 de       	rcall	.-764    	; 0x1074 <test_cham64>
+	test_cham128();
+    1370:	fe de       	rcall	.-516    	; 0x116e <test_cham128>
+	test_cham256();
+    1372:	7c df       	rcall	.-264    	; 0x126c <test_cham256>
+    1374:	80 e0       	ldi	r24, 0x00	; 0
+	
+}
+    1376:	90 e0       	ldi	r25, 0x00	; 0
+    1378:	08 95       	ret
+
+0000137a <_exit>:
+    137a:	f8 94       	cli
+
+0000137c <__stop_program>:
+    137c:	ff cf       	rjmp	.-2      	; 0x137c <__stop_program>
